@@ -12,4 +12,5 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 ![](https://docs.qiime2.org/2023.9/_images/overview.png)
 
 
-**Table of Contents**
+
+'$ conda activate qiime2-amplicon-2023.9'
