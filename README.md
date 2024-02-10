@@ -5,7 +5,7 @@ Análisis de los amplicones del gen ribosomal 16S rRNA en QIIME2 (Metabarcoding)
 Alberto Segovia (alberto.segovia@ibt.unam.mx)                       
 Copyright QIIME2-2024	
 
-###### Descripción general conceptual de QIIME2 
+##### Descripción general conceptual de QIIME2 
 
 Examinemos una descripción general conceptual de los distintos flujos de trabajo posibles para examinar los datos de secuencia de amplicones:
 
