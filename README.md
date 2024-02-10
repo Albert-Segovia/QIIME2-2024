@@ -18,10 +18,7 @@ Para este taller trabajaremos con datos de amplicones de la región V3-V4 del 16
   QIIME 2 command-line interface
   --------------------------------------
 
-`$ conda activate qiime2-amplicon-2023.9                               
-
-
-`
+`$ conda activate qiime2-amplicon-2023.9                                                                                                                                                                     `
 
 `$ qiime --help`
 
