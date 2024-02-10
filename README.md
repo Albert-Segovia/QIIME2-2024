@@ -13,6 +13,10 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 ![](https://docs.qiime2.org/2023.9/_images/overview.png)
 
 
+Para este taller trabajaremos con datos de amplicones de la región V3-V4 del 16S rRNA de muestras de tres tiempos de fermentación del pulque, estos se obtuvieron con una plataforma ILLUMINA MiSeq (2 x 300 pb) y están en formato FASTQ. Los datos fueron depositados en NCBI y ENA bajo el BioProject PRJEB13870 del artículo Deep microbial community profiling along the fermentation process of pulque, a biocultural resource of Mexico (Rocha-Arriaga et al., 2020).
+
+
+
   QIIME 2 command-line interface
   --------------------------------------
 
