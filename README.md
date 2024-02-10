@@ -36,7 +36,15 @@ Para este taller trabajaremos con datos de amplicones de la región V3-V4 del 16
 
 ##Headers (Underline)
 
+H1 Header (Underline)
+=============
 
+H2 Header (Underline)
+-------------
+
+###Characters
+                
+----
 
 
 
