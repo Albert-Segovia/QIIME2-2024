@@ -5,7 +5,8 @@ Análisis de los amplicones del gen ribosomal 16S rRNA en QIIME2 (Metabarcoding)
 PhD. Alberto Segovia (alberto.segovia@ibt.unam.mx)                       
 Copyright QIIME2-2024	
 
-QIIME ( inglés: / tʃ aɪ m / ch-eye-m ) [1] es una plataforma de ciencia de datos bioinformática , desarrollada originalmente para el análisis de datos de secuenciación de amplicones de genes marcadores de microbioma de alto rendimiento (p. ej., genes de ARNr 16S o 18S ) . Ha habido dos versiones principales de la plataforma QIIME, QIIME 1 [2] y QIIME 2. [3]
+QIIME (Quantitative Insights Into Microbial Ecology) 
+----------------------------------------
 
 Descripción general y conceptual de QIIME2
 ----------------------------------------
