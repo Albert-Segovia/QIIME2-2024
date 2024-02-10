@@ -16,9 +16,10 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 `$ conda activate qiime2-amplicon-2023.9`
 `$ qiime --help`
 
-Usage: qiime [OPTIONS] COMMAND [ARGS]...
+Usage: qiime [OPTIONS] COMMAND [ARGS]
+
 QIIME 2 command-line interface (q2cli)
-  --------------------------------------
+ 
 
   To get help with QIIME 2, visit https://qiime2.org.
 
