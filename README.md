@@ -10,7 +10,7 @@ Copyright QIIME2-2024
 QIIME (Quantitative Insights Into Microbial Ecology)
 ----------------------------------------
 
-This site was built using [GitHub Pages](https://pages.github.com/](https://www.nature.com/articles/s41587-019-0209-9).
+This site was built using [GitHub Pages](https://www.nature.com/articles/s41587-019-0209-9).
 
 
 
