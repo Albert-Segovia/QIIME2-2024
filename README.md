@@ -13,4 +13,4 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 
 
 
-'$ conda activate qiime2-amplicon-2023.9'
+`$ conda activate qiime2-amplicon-2023.9`
