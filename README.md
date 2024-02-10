@@ -14,12 +14,13 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 
 
 `$ conda activate qiime2-amplicon-2023.9`
+
 `$ qiime --help`
 
-Usage: qiime [OPTIONS] COMMAND [ARGS]
+Usage: qiime [OPTIONS] COMMAND [ARGS]...
 
-QIIME 2 command-line interface (q2cli)
- 
+  QIIME 2 command-line interface (q2cli)
+  --------------------------------------
 
   To get help with QIIME 2, visit https://qiime2.org.
 
@@ -36,8 +37,8 @@ QIIME 2 command-line interface (q2cli)
       source tab-qiime
 
 Options:
-  qiime --version   Show the version and exit.
-  qiime --help      Show this message and exit.
+  --version   Show the version and exit.
+  --help      Show this message and exit.
 
 Commands:
   info                Display information about current deployment.
@@ -47,7 +48,6 @@ Commands:
   composition         Plugin for compositional data analysis.
   cutadapt            Plugin for removing adapter sequences, primers, and
                       other unwanted sequence from sequence data.
-
   dada2               Plugin for sequence quality control with DADA2.
   deblur              Plugin for sequence quality control with Deblur.
   demux               Plugin for demultiplexing & viewing sequence quality.
@@ -57,7 +57,6 @@ Commands:
   feature-classifier  Plugin for taxonomic classification.
   feature-table       Plugin for working with sample by feature tables.
   fragment-insertion  Plugin for extending phylogenies.
-  gneiss              Plugin for building compositional models.
   longitudinal        Plugin for paired sample and time series analyses.
   metadata            Plugin for working with Metadata.
   phylogeny           Plugin for generating and manipulating phylogenies.
@@ -65,6 +64,5 @@ Commands:
   quality-filter      Plugin for PHRED-based filtering and trimming.
   sample-classifier   Plugin for machine learning prediction of sample
                       metadata.
-
   taxa                Plugin for working with feature taxonomy annotations.
   vsearch             Plugin for clustering and dereplicating with vsearch.
