@@ -1,1 +1,8 @@
+sample-id	barcode-sequence	body-site	year	month	day	subject	reported-antibiotic-usage	days-since-experiment-start
+#q2:types	categorical	categorical	numeric	numeric	numeric	categorical	categorical	numeric
+MA2SA2SS01	GGAGCCAC+CTCTCTAT	soild 	2023	0	0	subject-1	No	0
+MA2SA2SS02	GGAGCTAC+TCTCCTCT	soild 	2023	0	0	subject-2	No	0
+MA2SA2SS03	GGAGCTAC+GTAAGGAG	soild 	2023	0	0	subject-2	No	0
+MA2SA2SS04	GTAGCTAC+ACTGCATA	soild 	2023	0	0	subject-4	No	0
+MA2SA2SS05	GCGTAGTA+ACGGAGTA	soild 	2023	0	0	subject-5	No	0
 
