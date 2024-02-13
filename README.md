@@ -53,8 +53,9 @@ conda deactivate
 
 #### Verificación de instalación                                                                                                                                                                   
 
-`$ qiime --help`
-
+```
+qiime --help
+```
 
 
 
