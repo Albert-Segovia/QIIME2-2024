@@ -37,7 +37,7 @@ conda env create -n qiime2-amplicon-2023.9 --file qiime2-amplicon-2023.9-py38-li
 LIMPIEZA OPCIONAL
 
 ```
-rm qiime2-shotgun-2023.9-py38-linux-conda.yml
+rm qiime2-amplicon-2023.9-py38-linux-conda.yml
 ```
 #### Activación 
 
