@@ -58,22 +58,14 @@ qiime --help
 ```
 
 
-
-
-# QIIME2 utiliza sus propios artefactos, por lo que es necesario imporalos a su entorno. 
-# Cambiar el formato de las secuencias antes de importar. Consierar los siguiente:  
-
-```
-$ mv sequence_R1_fastq.gz BAQ1552.1.1_67_L001_R1_001.fastq.gz  
-$ mv sequence_R2_fastq.gz BAQ1552.1.1_67_L001_R2_001.fastq.gz
-```
-
-# Importar secuencias demultiplexing
-# Casava 1.8 paired-end demultiplexed fastq o Casava 1.8 single-end demultiplexed fastq
+#### QIIME2 utiliza sus propios artefactos, por lo que es necesario imporalos a su entorno. 
+#### Cambiar el formato de las secuencias antes de importar. Consierar los siguiente:  
+#### Importar secuencias demultiplexing
+#### Casava 1.8 paired-end demultiplexed fastq o Casava 1.8 single-end demultiplexed fastq
 
 qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
-  --input-path r \
+  --input-path input \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
   --output-path demux-paired-end.qza
 
