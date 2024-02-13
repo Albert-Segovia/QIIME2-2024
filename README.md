@@ -24,22 +24,25 @@ Las muestras obtenidas de este ejercicio fueron tomadas en Saanich Inlet que es 
 
 Trabajaremos con datos de amplicones de la región V6-V8 del 16S rRNA obtenidos en la plataforma ILLUMINA MiSeq (2 x 300 pb) con formato FASTQ. Los datos fueron depositados en NCBI bajo el BioProject PRJNA901178 y en [PANGEA](https://doi.org/10.1594/PANGAEA.912191) del artículo "Network analysis of 16S rRNA sequences suggests microbial keystone taxa contribute to marine N2O cycling" [(Jameson et al., 2023)](https://www.nature.com/articles/s42003-023-04597-5).
 
-Instalación de QIIME 2 
+#Instalación de QIIME 2 
 --------------------------------------
-```
+
 #### Descarga
-
-
+```
 wget https://data.qiime2.org/distro/amplicon/qiime2-amplicon-2023.9-py38-linux-conda.yml
 
 conda env create -n qiime2-amplicon-2023.9 --file qiime2-amplicon-2023.9-py38-linux-conda.yml
+```
 
-Activación 
+#### Activación 
 
+```
 conda activate qiime2-amplicon-2023.9
+```
 
-Desactivación 
+#### Desactivación 
 
+```
 conda deactivate
 ```
 
