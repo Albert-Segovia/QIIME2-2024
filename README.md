@@ -60,17 +60,21 @@ qiime --help
 Análisis con QIIME2
 ----------------------------------------
 
-#### QIIME2 utiliza sus propios artefactos, por lo que es necesario imporalos a su entorno. 
-#### Importar secuencias demultiplexing
 
-Casava 1.8 paired-end demultiplexed fastq o Casava 1.8 single-end demultiplexed fastq
+Casava 1.8 paired-end demultiplexed fastq o Casava 1.8 single-end demultiplexed fastq (secuencias demultiplexing)
 ----------------------------------------
+#### QIIME2 utiliza sus propios artefactos, por lo que es necesario imporalos a su entorno. 
+
+
+```
 
 qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
   --input-path input \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
   --output-path demux-paired-end.qza
+
+```
 
 # Generar las visualizacion de los datos (QIIME 2 View)
 # A continuación, veremos la calidad de la secuencia 
