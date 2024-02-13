@@ -14,7 +14,7 @@ QIIME (Quantitative Insights Into Microbial Ecology)
 
 
 
-Descripción general y conceptual de QIIME2
+Descripción conceptual de QIIME2
 ----------------------------------------
 
 Examinemos una descripción general conceptual de los distintos flujos de trabajo posibles para examinar los datos de secuencias de amplicones:
