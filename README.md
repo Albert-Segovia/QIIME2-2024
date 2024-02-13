@@ -23,7 +23,7 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 
 Las muestras obtenidas de este ejercicio fueron tomadas en Saanich Inlet que es un fiordo estacionalmente euxínico ubicado en la isla de Vancouver, Canadá, que se caracteriza por cambios estacionales extremos generados por gradientes redox de la columna de agua, que son impulsados por ciclos de producción primaria (producción de materia orgánica que realizan los organismos autótrofos) y mezcla física. Igualmente, la ensenada se distingue por tener zonas marinas con deficiencia de oxígeno (ODZ) por sus profundidades restringidas (~225 m como máximo) y la presencia de aguas de fondo sulfurosas durante gran parte del año.
 
-Trabajaremos con datos de amplicones de la región V6-V8 del 16S rRNA obtenidos en la plataforma ILLUMINA MiSeq (2 x 300 pb) con formato FASTQ. Los datos fueron depositados en NCBI bajo el BioProject PRJNA901178 y en PANGEA https://doi.org/10.1594/PANGAEA.912191 del artículo "Network analysis of 16S rRNA sequences suggests microbial keystone taxa contribute to marine N2O cycling" [(Jameson et al., 2023)](https://www.nature.com/articles/s42003-023-04597-5).
+Trabajaremos con datos de amplicones de la región V6-V8 del 16S rRNA obtenidos en la plataforma ILLUMINA MiSeq (2 x 300 pb) con formato FASTQ. Los datos fueron depositados en NCBI bajo el BioProject PRJNA901178 y en [PANGEA](https://doi.org/10.1594/PANGAEA.912191). del artículo "Network analysis of 16S rRNA sequences suggests microbial keystone taxa contribute to marine N2O cycling" [(Jameson et al., 2023)](https://www.nature.com/articles/s42003-023-04597-5).
 
 
   QIIME 2 command-line interface
