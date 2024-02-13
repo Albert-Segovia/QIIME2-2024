@@ -7,9 +7,9 @@ Copyright QIIME2-2024
 
 <!-- This content will not appear in the rendered Markdown -->
 
-QIIME (Quantitative Insights Into Microbial Ecology)
+QIIME2 (Quantitative Insights Into Microbial Ecology)
 ----------------------------------------
-QIIME es un pipeline desarrollado para el análisis de metataxonomía que contiene herramientas para limpiar secuencias, agrupar, asignar taxonomía, reconstruir filogenias, inferir métricas de diversidad, abundancia diferencial, etc. Es de código abierto, posee una interfaz gráfica amigable, mucha documentación, tutoriales y foros de ayuda [(Bolyen et al., 2019)](https://www.nature.com/articles/s41587-019-0209-9).
+es una plataforma bioinformática de microbiomas completamente rediseñadaes un pipeline desarrollado para el análisis de metataxonomía que contiene herramientas para limpiar secuencias, agrupar, asignar taxonomía, reconstruir filogenias, inferir métricas de diversidad, abundancia diferencial, etc. Es de código abierto, posee una interfaz gráfica amigable, mucha documentación, tutoriales y foros de ayuda [(Bolyen et al., 2019)](https://www.nature.com/articles/s41587-019-0209-9).
 
 
 Descripción conceptual de QIIME2
