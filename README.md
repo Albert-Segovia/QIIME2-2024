@@ -27,7 +27,8 @@ Trabajaremos con datos de amplicones de la región V6-V8 del 16S rRNA obtenidos 
 Instalación de QIIME 2 
 --------------------------------------
 ```
-Descarga
+#### Descarga
+
 
 wget https://data.qiime2.org/distro/amplicon/qiime2-amplicon-2023.9-py38-linux-conda.yml
 
