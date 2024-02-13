@@ -9,7 +9,9 @@ Copyright QIIME2-2024
 
 QIIME2 (Quantitative Insights Into Microbial Ecology)
 ----------------------------------------
-es una plataforma bioinformática de microbiomas completamente rediseñadaes un pipeline desarrollado para el análisis de metataxonomía que contiene herramientas para limpiar secuencias, agrupar, asignar taxonomía, reconstruir filogenias, inferir métricas de diversidad, abundancia diferencial, etc. Es de código abierto, posee una interfaz gráfica amigable, mucha documentación, tutoriales y foros de ayuda [(Bolyen et al., 2019)](https://www.nature.com/articles/s41587-019-0209-9).
+es una plataforma bioinformática para el análisis integral y totalmente reproducible de los microbiomas, la cual contiene herramientas para limpiar secuencias, agrupar, asignar taxonomía, reconstruir filogenias, inferir métricas de diversidad, abundancia diferencial, etc. Es de código abierto, posee una interfaz gráfica amigable, mucha documentación, tutoriales y foros de ayuda [(Bolyen et al., 2019)](https://www.nature.com/articles/s41587-019-0209-9).
+
+QIIME 2 es una plataforma bioinformática de microbiomas completamente rediseñada basada en la popular plataforma QIIME, a la que ha reemplazado. QIIME 2 facilita la ciencia de datos de microbiomas integral y totalmente reproducible, mejorando la accesibilidad para diversos usuarios al agregar múltiples interfaces de usuario. QIIME 2 se puede combinar con Qiita, una plataforma web de código abierto, para reutilizar los datos disponibles para el metanálisis. El siguiente protocolo básico describe cómo instalar QIIME 2 en una sola computadora y analizar datos de secuencia de microbioma, desde el procesamiento de lecturas de secuencias de ADN sin procesar hasta la generación de figuras interactivas publicables
 
 
 Descripción conceptual de QIIME2
