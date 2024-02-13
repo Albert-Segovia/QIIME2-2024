@@ -51,16 +51,7 @@ conda activate qiime2-amplicon-2023.9
 conda deactivate
 ```
 
-
-
-
-
-
-
-  QIIME 2 command-line interface
-  --------------------------------------
-
-`$ conda activate qiime2-amplicon-2023.9`                                                                                                                                                                    
+#### Verificación de instalación                                                                                                                                                                   
 
 `$ qiime --help`
 
