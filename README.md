@@ -63,7 +63,7 @@ Análisis con QIIME2
 
 Casava 1.8 paired-end demultiplexed fastq o Casava 1.8 single-end demultiplexed fastq (secuencias demultiplexing)
 ----------------------------------------
-#### QIIME2 utiliza sus propios artefactos, por lo que es necesario imporalos a su entorno. 
+#### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno. 
 
 
 ```
