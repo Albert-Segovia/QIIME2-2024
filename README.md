@@ -66,18 +66,19 @@ Step 1: Descargar e importar secuencias
 mkdir input 
 cd input
 ```
-Descargar el escript download de la carpeta data y concederle permisos de ejecución
+2. Descargar el escript download de la carpeta data y concederle permisos de ejecución
 ```
 chmod +777 download.sh  
 bash download.sh 
 ```
-salir de la carpeta input
+3. Salir de la carpeta input
 
 ```
 cd ..
 ```
 
-Casava 1.8 paired-end demultiplexed fastq 
+#### Casava 1.8 paired-end demultiplexed fastq 
+
 
 ```
 
@@ -88,21 +89,26 @@ qiime tools import \
   --output-path demux-paired-end-full.qza
 ```
 
-Step 2: Submuestreo de los datos con la finalidad de optimizar tiempo y recursos
+Step 2: Submuestreo de los datos (unicamente para el ejercicio)
 ------------------------------------------------------------------------------------------------ 
-
+```
 
 qiime demux subsample-paired \
   --i-sequences demux-paired-end-full.qza \
   --p-fraction 0.1 \
   --o-subsampled-sequences demux-subsample.qza
 
+Verificar 
+
   qiime demux summarize \
   --i-data demux-subsample.qza \
   --o-visualization demux-subsample.qzv
 
-Step 3: Submuestreo de los datos con la finalidad de optimizar tiempo y recursos
-------------------------------------------------------------------------------------------------cleaning and quality control of the data
+```
+
+Step 3: Submuestreo de los datos (unicamente para el ejercicio)
+---------------------------------------------------------------------------------------------
+```
 
 qiime dada2 denoise-paired \
   --i-demultiplexed-seqs demux-subsample.qza \
@@ -113,10 +119,12 @@ qiime dada2 denoise-paired \
   --o-table table.qza \
   --o-representative-sequences rep-seqs.qza \
   --o-denoising-stats denoising-stats.qza
+```
 
+Step 3: Submuestreo de los datos (unicamente para el ejercicio)
+---------------------------------------------------------------------------------------------
 
-#################################################################################### 
-
+```
 qiime feature-table summarize \
   --i-table table.qza \
   --o-visualization table.qzv \
@@ -130,6 +138,7 @@ qiime metadata tabulate \
   --m-input-file denoising-stats.qza \
   --o-visualization denoising-stats.qzv  
 
+```
  
   
 #####################################################################################
