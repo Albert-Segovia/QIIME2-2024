@@ -66,8 +66,7 @@ Step 1: Importar, liempeiza y control de calidad de los datos
 mkdir input 
 cd input
 ```
-Descargar el escript download de la carpeta data
-Concederle permisos de ejecución
+Descargar el escript download de la carpeta data y concederle permisos de ejecución
 ```
 chmod +777 download.sh  
 bash download.sh 
@@ -98,6 +97,9 @@ qiime demux subsample-paired \
   --p-fraction 0.1 \
   --o-subsampled-sequences demux-subsample.qza
 
+
+Step 2: Submuestreo de los datos con la finalidad de optimizar tiempo y recursos
+------------------------------------------------------------------------------------------------ 
 
 qiime demux summarize \
   --i-data demux-subsample.qza \
