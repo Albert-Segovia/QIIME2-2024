@@ -61,7 +61,7 @@ Step 1: Descargar e importar secuencias
 ----------------------------------------
 #### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno. 
 
-1. Crear una durectorio de trabajo 
+1. Crear una directorio de trabajo 
 ```
 mkdir input 
 cd input
