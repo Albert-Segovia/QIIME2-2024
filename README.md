@@ -57,9 +57,9 @@ conda deactivate
 qiime --help
 ```
 
-Step 1: Descargar e importar secuencias (opcional) 
+Descargar e importar secuencias
 ----------------------------------------
-#### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno. 
+#### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno (opcional) 
 
 1. Crear una directorio de trabajo 
 ```
@@ -149,10 +149,10 @@ bash download.sh
 cd ..
 ```
 
-#### Casava 1.8 paired-end demultiplexed fastq 
+##### Importar los datos Casava 1.8 paired-end demultiplexed fastq (opcional)
+
 
 ```
-
 qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
   --input-path input \
@@ -160,8 +160,8 @@ qiime tools import \
   --output-path demux-paired-end-full.qza
 ```
 
-Submuestreo de los datos (unicamente para el ejercicio)
------------------------------------------------------------------------------------------------- 
+#### Submuestreo de los datos para el ejercicio (opcional)
+ 
 ```
 
 qiime demux subsample-paired \
@@ -172,6 +172,8 @@ qiime demux subsample-paired \
 
 Step 1: Descargar el objeto demux-subsample.qza
 -----------------------------------------------
+
+#### Descargar el objeto demux-subsample.qza (se encunetran las seicuencias trabajar)
 
 ```
 https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/demux-subsample.qza
