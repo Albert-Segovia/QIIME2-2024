@@ -96,9 +96,11 @@ qiime demux subsample-paired \
   --i-sequences demux-paired-end-full.qza \
   --p-fraction 0.1 \
   --o-subsampled-sequences demux-subsample.qza
+```
 
-Verificar 
+#### Crear objetos de visualización  
 
+```
   qiime demux summarize \
   --i-data demux-subsample.qza \
   --o-visualization demux-subsample.qzv
