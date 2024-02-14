@@ -68,6 +68,7 @@ cd input
 ```
 2. Descargar el escript download de la carpeta data y concederle permisos de ejecución
 ```
+https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/download.sh
 chmod +777 download.sh  
 bash download.sh 
 ```
@@ -101,7 +102,7 @@ qiime demux subsample-paired \
 #### Descargar el objeto demux-subsample.qza
 
 ```
-
+https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/demux-subsample.qza
 ```
 
 #### Crear objetos de visualización  
