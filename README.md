@@ -98,6 +98,12 @@ qiime demux subsample-paired \
   --o-subsampled-sequences demux-subsample.qza
 ```
 
+#### Descargar el objeto demux-subsample.qza
+
+```
+
+```
+
 #### Crear objetos de visualización  
 
 ```
@@ -106,6 +112,9 @@ qiime demux subsample-paired \
   --o-visualization demux-subsample.qzv
 
 ```
+Ingresar a https://view.qiime2.org/
+
+Realizar el análisis 
 
 Step 3: Submuestreo de los datos (unicamente para el ejercicio)
 ---------------------------------------------------------------------------------------------
