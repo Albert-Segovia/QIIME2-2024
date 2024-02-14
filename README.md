@@ -57,14 +57,28 @@ conda deactivate
 qiime --help
 ```
 
-Análisis con QIIME2
-----------------------------------------
-
-
-Importar las secuencias demultiplexadas con Casava 1.8 paired-end demultiplexed fastq 
+Step 1: Importar, liempeiza y control de calidad de los datos
 ----------------------------------------
 #### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno. 
 
+1. Crear una durectorio de trabajo 
+```
+mkdir input 
+cd input
+```
+Descargar el escript download de la carpeta data
+Concederle permisos de ejecución
+```
+chmod +777 download.sh  
+bash download.sh 
+```
+salir de la carpeta input
+
+```
+cd ..
+```
+
+Casava 1.8 paired-end demultiplexed fastq 
 
 ```
 
@@ -73,8 +87,11 @@ qiime tools import \
   --input-path input \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
   --output-path demux-paired-end.qza
-
 ```
+
+Step 2: Submuestreo de los datos con la finalidad de optimizar tiempo y recursos
+------------------------------------------------------------------------------------------------ 
+
 
 qiime demux subsample-paired \
   --i-sequences demux-paired-end-full.qza \
