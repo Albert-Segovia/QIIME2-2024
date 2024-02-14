@@ -79,7 +79,6 @@ cd ..
 
 #### Casava 1.8 paired-end demultiplexed fastq 
 
-
 ```
 
 qiime tools import \
