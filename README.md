@@ -57,7 +57,7 @@ conda deactivate
 qiime --help
 ```
 
-Step 1: Importar, liempeiza y control de calidad de los datos
+Step 1: Descargar e importar secuencias 
 ----------------------------------------
 #### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno. 
 
@@ -85,7 +85,7 @@ qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
   --input-path input \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
-  --output-path demux-paired-end.qza
+  --output-path demux-paired-end-full.qza
 ```
 
 Step 2: Submuestreo de los datos con la finalidad de optimizar tiempo y recursos
@@ -97,25 +97,12 @@ qiime demux subsample-paired \
   --p-fraction 0.1 \
   --o-subsampled-sequences demux-subsample.qza
 
-
-Step 2: Submuestreo de los datos con la finalidad de optimizar tiempo y recursos
------------------------------------------------------------------------------------------------- 
-
-qiime demux summarize \
+  qiime demux summarize \
   --i-data demux-subsample.qza \
   --o-visualization demux-subsample.qzv
 
-iime demux subsample-paired \
-  --i-sequences demux-paired-end-full.qza \
-  --p-fraction 0.3 \
-  --o-subsampled-sequences demux-subsample.qza
-
-qiime demux summarize \
-  --i-data demux-subsample.qza \
-  --o-visualization demux-subsample.qzv
-
- 
-#############################################################################
+Step 3: Submuestreo de los datos con la finalidad de optimizar tiempo y recursos
+------------------------------------------------------------------------------------------------cleaning and quality control of the data
 
 qiime dada2 denoise-paired \
   --i-demultiplexed-seqs demux-subsample.qza \
