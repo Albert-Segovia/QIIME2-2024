@@ -160,7 +160,7 @@ qiime tools import \
   --output-path demux-paired-end-full.qza
 ```
 
-Step 2: Submuestreo de los datos (unicamente para el ejercicio)
+Submuestreo de los datos (unicamente para el ejercicio)
 ------------------------------------------------------------------------------------------------ 
 ```
 
@@ -170,7 +170,8 @@ qiime demux subsample-paired \
   --o-subsampled-sequences demux-subsample.qza
 ```
 
-#### Descargar el objeto demux-subsample.qza
+Step 1: Descargar el objeto demux-subsample.qza
+-----------------------------------------------
 
 ```
 https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/demux-subsample.qza
@@ -187,7 +188,7 @@ Ingresar a https://view.qiime2.org/
 
 Realizar el análisis 
 
-Step 3: Submuestreo de los datos (unicamente para el ejercicio)
+Step 1: Submuestreo de los datos (unicamente para el ejercicio)
 ---------------------------------------------------------------------------------------------
 ```
 
