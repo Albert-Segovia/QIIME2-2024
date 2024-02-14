@@ -110,7 +110,6 @@ qiime demux subsample-paired \
   qiime demux summarize \
   --i-data demux-subsample.qza \
   --o-visualization demux-subsample.qzv
-
 ```
 Ingresar a https://view.qiime2.org/
 
