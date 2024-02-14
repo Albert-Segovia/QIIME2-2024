@@ -108,7 +108,7 @@ qiime dada2 denoise-paired \
   --i-demultiplexed-seqs demux-subsample.qza \
   --p-trim-left-f 6 \
   --p-trim-left-r 6 \
-  --p-trunc-len-f 272 \
+  --p-trunc-len-f 263 \
   --p-trunc-len-r 221 \
   --o-table table.qza \
   --o-representative-sequences rep-seqs.qza \
