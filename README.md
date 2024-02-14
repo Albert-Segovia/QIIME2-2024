@@ -61,7 +61,7 @@ Análisis con QIIME2
 ----------------------------------------
 
 
-Casava 1.8 paired-end demultiplexed fastq (secuencias demultiplexadas)
+Importar las secuencias demultiplexadas con Casava 1.8 paired-end demultiplexed fastq 
 ----------------------------------------
 #### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno. 
 
@@ -76,12 +76,94 @@ qiime tools import \
 
 ```
 
+qiime demux subsample-paired \
+  --i-sequences demux-paired-end-full.qza \
+  --p-fraction 0.1 \
+  --o-subsampled-sequences demux-subsample.qza
+
+
+qiime demux summarize \
+  --i-data demux-subsample.qza \
+  --o-visualization demux-subsample.qzv
+
+iime demux subsample-paired \
+  --i-sequences demux-paired-end-full.qza \
+  --p-fraction 0.3 \
+  --o-subsampled-sequences demux-subsample.qza
+
+qiime demux summarize \
+  --i-data demux-subsample.qza \
+  --o-visualization demux-subsample.qzv
+
+ 
+#############################################################################
+
+qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux-subsample.qza \
+  --p-trim-left-f 6 \
+  --p-trim-left-r 6 \
+  --p-trunc-len-f 272 \
+  --p-trunc-len-r 221 \
+  --o-table table.qza \
+  --o-representative-sequences rep-seqs.qza \
+  --o-denoising-stats denoising-stats.qza
+
+
+#################################################################################### 
+
+qiime feature-table summarize \
+  --i-table table.qza \
+  --o-visualization table.qzv \
+  --m-sample-metadata-file sample-metadata.tsv
+
+qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
+
+qiime metadata tabulate \
+  --m-input-file denoising-stats.qza \
+  --o-visualization denoising-stats.qzv  
+
+ 
+  
+#####################################################################################
+qiime feature-classifier classify-sklearn \
+--i-classifier silva-138-99-nb-classifier.qza \
+--i-reads rep-seqs.qza \
+--o-classification taxonomy_silva.qza
+
+
+# Generamos el archivo para visualizacion
+
+qiime metadata tabulate \
+--m-input-file taxonomy_silva.qza \
+--o-visualization taxonomy_silva.qzv
+
+
+qiime taxa barplot \
+--i-table table.qza \
+--i-taxonomy taxonomy_silva.qza \
+--m-metadata-file sample-metadata.tsv \
+--o-visualization taxa-bar-plots_silva.qzv
+
+
+
+
+
+
+
 # Generar las visualizacion de los datos (QIIME 2 View)
 # A continuación, veremos la calidad de la secuencia 
 
 qiime demux summarize \
 --i-data demux-paired-end.qza \
 --o-visualization demux-paired-end.qzv
+
+
+
+
+
+
 
 
 # Análisis de Paired-end read 
