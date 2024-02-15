@@ -150,7 +150,7 @@ cd ..
 ```
 
 ##### Importar los datos Casava 1.8 paired-end demultiplexed fastq (opcional)
-
+QIIME utiliza sus propios artefactos por lo que tendremos que impotarlos al ambiente de trabajo (usando Casava)
 
 ```
 qiime tools import \
@@ -161,7 +161,7 @@ qiime tools import \
 ```
 
 #### Submuestreo de los datos para el ejercicio (opcional)
- 
+Realizaremos el sumbmuestreo de los datos para facilitar el análisis 
 ```
 
 qiime demux subsample-paired \
@@ -170,13 +170,25 @@ qiime demux subsample-paired \
   --o-subsampled-sequences demux-subsample.qza
 ```
 
-Step 1: Descargar el objeto demux-subsample.qza
+Step 1: Limpieza y control de calidad de los datos 
 -----------------------------------------------
-
-#### Descargar el objeto demux-subsample.qza (se encunetran las seicuencias trabajar)
+#### Descargar el objeto demux-subsample.qza 
 
 ```
 https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/demux-subsample.qza
+```
+#### Eliminar los cebadores 
+
+En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que deben de eliminarse (usando cutadapt) antes de eliminar el ruido.
+
+```
+qiime cutadapt trim-paired \
+--i-demultiplexed-sequences demux-subsample.qza \
+--p-front-f ACGCGHNRAACCTTACC \
+--p-front-r ACGGGCRGTGWGTRCAA \
+--p-error-rate 0.1 \
+--output-dir analysis/seqs_trimmed \
+--verbose
 ```
 
 #### Crear objetos de visualización  
@@ -186,11 +198,9 @@ https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a
   --i-data demux-subsample.qza \
   --o-visualization demux-subsample.qzv
 ```
-Ingresar a https://view.qiime2.org/
+Arrastrar el archivo demux-subsample.qzv https://view.qiime2.org/
 
-Realizar el análisis 
-
-Step 1: Submuestreo de los datos (unicamente para el ejercicio)
+Step 2: 
 ---------------------------------------------------------------------------------------------
 ```
 
