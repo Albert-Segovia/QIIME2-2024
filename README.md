@@ -211,7 +211,7 @@ qiime dada2 denoise-paired \
 
 #### Generar archivos de resumen
 En este paso se generaran los ortefactos de vusualización que contienen la tabla de características, las secuencias de características correspondientes y las estadísticas de eliminación de ruido de DADA2. 
-Es necesario tener el archivo de metadatos. Descargarlo con el script: wget https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/sample-metadata.tsv
+Es necesario tener el archivo de metadatos. Descargar manualmente el sample-metadata.tsv.  
 
 ```
 qiime feature-table summarize \
@@ -230,23 +230,33 @@ qiime metadata tabulate \
 
 Step 2: Análisis taxonómico
 -----------------------------------------------
-Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV)a la resolución más alta según una base de datos de SILVA
-Descargar manualmente silva-138-99-nb-classifier.qza o 
+Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV) a la resolución más alta (99% de identidad) de acuerdo a la base de datos de SILVA y/o Greengenes 2022. 
+Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn. Necesitará acceder a una clasificación precalculada por lo que debera descargar manualmente taxonomy_silva.qza. 
 
+
+Clasifiación con la base de datos de Silva
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
 --i-reads rep-seqs.qza \
 --o-classification taxonomy_silva.qza
 ```
-
-Generamos el archivo para visualizacion
+Clasificación con la base de datos de Greengenes actializada al año 2022
+```
+qiime feature-classifier classify-sklearn \
+--i-classifier silva-138-99-nb-classifier.qza \
+--i-reads rep-seqs.qza \
+--o-classification taxonomy_silva.qza
+```
+Generar el artefacto de visualización de las asignaciones taxonómicas
 
 ```
 qiime metadata tabulate \
 --m-input-file taxonomy_silva.qza \
 --o-visualization taxonomy_silva.qzv
 
+Filtre lecturas clasificadas como mitocondrias y cloroplastos. Los ASV no asignados se conservan. Genere un archivo de resumen visible de la nueva tabla para ver el efecto del filtrado.
+Según el desarrollador de QIIME, Nicholas Bokulich, el filtrado de baja abundancia (es decir, la eliminación de ASV que contienen muy pocas secuencias) no es necesario en el modelo ASV.
 
 qiime taxa barplot \
 --i-table table.qza \
