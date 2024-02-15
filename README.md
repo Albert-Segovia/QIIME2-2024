@@ -255,16 +255,16 @@ Generar el artefacto de visualización de las asignaciones taxonómicas
 qiime metadata tabulate \
 --m-input-file taxonomy_silva.qza \
 --o-visualization taxonomy_silva.qzv
-
+```
 Filtre lecturas clasificadas como mitocondrias y cloroplastos. Los ASV no asignados se conservan. Genere un archivo de resumen visible de la nueva tabla para ver el efecto del filtrado.
 Según el desarrollador de QIIME, Nicholas Bokulich, el filtrado de baja abundancia (es decir, la eliminación de ASV que contienen muy pocas secuencias) no es necesario en el modelo ASV.
-
+```
 qiime taxa barplot \
 --i-table table.qza \
 --i-taxonomy taxonomy_silva.qza \
 --m-metadata-file sample-metadata.tsv \
 --o-visualization taxa-bar-plots_silva.qzv
-
+```
 
 
 
