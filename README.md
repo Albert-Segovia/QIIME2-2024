@@ -210,7 +210,7 @@ qiime dada2 denoise-paired \
 ```
 
 #### Generar archivos de resumen
-# En este paso se generaran los ortefactos de vusualización que contienen la tabla de características, las secuencias de características correspondientes y las estadísticas de eliminación de ruido de DADA2. 
+En este paso se generaran los ortefactos de vusualización que contienen la tabla de características, las secuencias de características correspondientes y las estadísticas de eliminación de ruido de DADA2. 
 Es necesario tener el archivo de metadatos. Descargarlo con el script: wget https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/sample-metadata.tsv
 
 ```
@@ -226,18 +226,23 @@ qiime feature-table tabulate-seqs \
 qiime metadata tabulate \
   --m-input-file denoising-stats.qza \
   --o-visualization denoising-stats.qzv  
+```
+
+Step 2: Análisis taxonómico
+-----------------------------------------------
+Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV)a la resolución más alta según una base de datos de SILVA
+Descargar manualmente silva-138-99-nb-classifier.qza o 
 
 ```
- #### 
-  
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
 --i-reads rep-seqs.qza \
 --o-classification taxonomy_silva.qza
+```
 
+Generamos el archivo para visualizacion
 
-# Generamos el archivo para visualizacion
-
+```
 qiime metadata tabulate \
 --m-input-file taxonomy_silva.qza \
 --o-visualization taxonomy_silva.qzv
