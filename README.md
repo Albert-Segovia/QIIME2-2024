@@ -173,7 +173,7 @@ https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-subsample.qza
 
 #### Eliminar los cebadores 
 
-En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que se deben de eliminar (usando cutadapt) antes de eliminar el ruido.
+En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que se deben de eliminar (usando cutadapt) justo antes de eliminar el ruido.
 
 ```
 qiime cutadapt trim-paired \
@@ -186,19 +186,16 @@ qiime cutadapt trim-paired \
 ```
 
 #### Crear objetos de visualización e interpretar la calidad de las secuencias
-
+Una vez eliminados los cebadores generaremos un artefacto de vusualización 
 ```
   qiime demux summarize \
   --i-data demux-subsample.qza \
   --o-visualization demux-subsample.qzv
 ```
-Arrastrar el archivo demux-subsample.qzv a la página https://view.qiime2.org/
-
-Usaremos estos gráficos para determinar qué parámetros de recorte queremos usar para eliminar el ruido con DADA2 y luego eliminaremos el ruido de las lecturas usando dada2 denoise-paired
-
+Arrastrar el artefacto demux-subsample.qzv a la página https://view.qiime2.org/
 
 #### Recorte e eliminación de ruido  
-
+Usaremos estos gráficos para determinar qué parámetros de recorte queremos usar para eliminar el ruido con DADA2 y luego eliminaremos el ruido de las lecturas usando dada2 denoise-paired
 ```
 
 qiime dada2 denoise-paired \
@@ -231,9 +228,8 @@ qiime metadata tabulate \
   --o-visualization denoising-stats.qzv  
 
 ```
- 
+ #### 
   
-#####################################################################################
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
 --i-reads rep-seqs.qza \
