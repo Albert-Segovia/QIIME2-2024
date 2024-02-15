@@ -248,12 +248,12 @@ qiime feature-classifier classify-sklearn \
 --o-classification taxonomy_silva.qza
 ```
 
-Clasificación con la base de datos de Greengenes actualizada al año 2022 (opcional)
 
 Descargar manualmente la base de datos de Greengenes2 2022.10 full length sequences: gg_2022_10_backbone_full_length.nb.qza de https://docs.qiime2.org/2023.9/data-resources/ o con wget 
 ```
 wget https://data.qiime2.org/2023.9/common/gg_2022_10_backbone_full_length.nb.qza
 ```
+Clasificación con la base de datos de Greengenes actualizada al año 2022 (opcional)
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
