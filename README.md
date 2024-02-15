@@ -172,7 +172,8 @@ qiime demux subsample-paired \
 
 Step 1: Limpieza y control de calidad de los datos 
 -----------------------------------------------
-#### Descargar el objeto demux-subsample.qza 
+#### Descargar manualmente el objeto demux-subsample.qza (importante) 
+https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-subsample.qza
 
 #### Eliminar los cebadores 
 
