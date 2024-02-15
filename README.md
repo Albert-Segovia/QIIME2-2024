@@ -179,7 +179,7 @@ https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a
 ```
 #### Eliminar los cebadores 
 
-En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que deben de eliminarse (usando cutadapt) antes de eliminar el ruido.
+En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que se deben de eliminar (usando cutadapt) antes de eliminar el ruido.
 
 ```
 qiime cutadapt trim-paired \
@@ -191,17 +191,20 @@ qiime cutadapt trim-paired \
 --verbose
 ```
 
-#### Crear objetos de visualización  
+#### Crear objetos de visualización e interpretar la calidad de las secuencias
 
 ```
   qiime demux summarize \
   --i-data demux-subsample.qza \
   --o-visualization demux-subsample.qzv
 ```
-Arrastrar el archivo demux-subsample.qzv https://view.qiime2.org/
+Arrastrar el archivo demux-subsample.qzv a la página https://view.qiime2.org/
 
-Step 2: 
----------------------------------------------------------------------------------------------
+Usaremos estos gráficos para determinar qué parámetros de recorte queremos usar para eliminar el ruido con DADA2 y luego eliminaremos el ruido de las lecturas usando dada2 denoise-paired
+
+
+#### Recorte e eliminación de ruido  
+
 ```
 
 qiime dada2 denoise-paired \
@@ -215,8 +218,9 @@ qiime dada2 denoise-paired \
   --o-denoising-stats denoising-stats.qza
 ```
 
-Step 3: Submuestreo de los datos (unicamente para el ejercicio)
----------------------------------------------------------------------------------------------
+#### Generar archivos de resumen
+# En este paso se generaran los ortefactos de vusualización que contienen la tabla de características, las secuencias de características correspondientes y las estadísticas de eliminación de ruido de DADA2. 
+Es necesario tener el archivo de metadatos. Descargarlo con el script: wget https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/sample-metadata.tsv
 
 ```
 qiime feature-table summarize \
