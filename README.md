@@ -210,6 +210,7 @@ qiime dada2 denoise-paired \
 ```
 
 #### Generar archivos de resumen
+
 En este paso se generaran los ortefactos de vusualización que contienen la tabla de características, las secuencias de características correspondientes y las estadísticas de eliminación de ruido de DADA2. 
 Es necesario tener el archivo de metadatos. Descargar manualmente el sample-metadata.tsv.  
 
@@ -230,6 +231,7 @@ qiime metadata tabulate \
 
 Step 2: Análisis taxonómico
 -----------------------------------------------
+
 Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV) a la resolución más alta (99% de identidad) de acuerdo a la base de datos de SILVA y/o Greengenes 2022. 
 
 Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn. 
@@ -240,7 +242,9 @@ qiime feature-classifier classify-sklearn \
 --i-reads rep-seqs.qza \
 --o-classification taxonomy_silva.qza
 ```
+
 Clasificación con la base de datos de Greengenes actializada al año 2022 (opcional)
+
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
@@ -256,6 +260,7 @@ qiime metadata tabulate \
 --m-input-file taxonomy_silva.qza \
 --o-visualization taxonomy_silva.qzv
 ```
+
 Filtre lecturas clasificadas como mitocondrias y cloroplastos. Los ASV no asignados se conservan. Genere un archivo de resumen visible de la nueva tabla para ver el efecto del filtrado.
 Según el desarrollador de QIIME, Nicholas Bokulich, el filtrado de baja abundancia (es decir, la eliminación de ASV que contienen muy pocas secuencias) no es necesario en el modelo ASV.
 ```
