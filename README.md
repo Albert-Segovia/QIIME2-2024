@@ -165,8 +165,10 @@ qiime demux subsample-paired \
 Step 1: Limpieza y control de calidad de los datos 
 -----------------------------------------------
 #### Descargar manualmente el objeto demux-subsample.qza (importante) 
-https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-subsample.qza
-
+https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-subsample.qza o con:
+```
+wget https://github.com/Albert-Segovia/QIIME2-2024/raw/0824741796065083f2335cb2b4cd1a4c7d4ef9dc/demux-subsample.qza
+```
 #### Eliminar los cebadores 
 
 En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que se deben de eliminar (usando cutadapt) justo antes de eliminar el ruido.
