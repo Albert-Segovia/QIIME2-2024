@@ -235,20 +235,21 @@ Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Varian
 Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn. Necesitará acceder a una clasificación precalculada por lo que debera descargar manualmente taxonomy_silva.qza. 
 
 
-Clasifiación con la base de datos de Silva
+Clasifiación con la base de datos de Silva (opcional)
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
 --i-reads rep-seqs.qza \
 --o-classification taxonomy_silva.qza
 ```
-Clasificación con la base de datos de Greengenes actializada al año 2022
+Clasificación con la base de datos de Greengenes actializada al año 2022 (opcional)
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
 --i-reads rep-seqs.qza \
 --o-classification taxonomy_silva.qza
 ```
+
 Generar el artefacto de visualización de las asignaciones taxonómicas
 
 ```
