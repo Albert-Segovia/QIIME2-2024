@@ -235,11 +235,12 @@ Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Varian
 
 Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn. 
 
+
+Descargar manualmente la base de datos Silva 138 99% OTUs full-length sequences: silva-138-99-nb-classifier.qza de https://docs.qiime2.org/2023.9/data-resources/ o con wget 
+```
+wget https://data.qiime2.org/2023.9/common/silva-138-99-515-806-nb-classifier.qza
+```
 Clasifiación con la base de datos de Silva (opcional)
-
-Descargar manualmente la base de datos Silva 138 99% OTUs full-length sequences: silva-138-99-nb-classifier.qza de https://docs.qiime2.org/2023.9/data-resources/ o 
-con wget `wget https://data.qiime2.org/2023.9/common/silva-138-99-515-806-nb-classifier.qza`
-
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
@@ -249,8 +250,10 @@ qiime feature-classifier classify-sklearn \
 
 Clasificación con la base de datos de Greengenes actualizada al año 2022 (opcional)
 
-Descargar manualmente la base de datos de Greengenes2 2022.10 full length sequences: gg_2022_10_backbone_full_length.nb.qza de https://docs.qiime2.org/2023.9/data-resources/ o 
-con wget `wget https://data.qiime2.org/2023.9/common/gg_2022_10_backbone_full_length.nb.qza`
+Descargar manualmente la base de datos de Greengenes2 2022.10 full length sequences: gg_2022_10_backbone_full_length.nb.qza de https://docs.qiime2.org/2023.9/data-resources/ o con wget 
+```
+wget https://data.qiime2.org/2023.9/common/gg_2022_10_backbone_full_length.nb.qza
+```
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
