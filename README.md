@@ -140,6 +140,7 @@ done
 chmod +777 download.sh  
 bash download.sh 
 ```
+4. Se pueden descargar de manera manual pero tomaría demasiado tiempo (no es recomendable). 
 
 ##### Importar los datos con Casava 1.8 paired-end demultiplexed fastq (opcional)
 QIIME utiliza sus propios artefactos por lo que tendremos que impotarlos al ambiente de trabajo (usando Casava)
@@ -236,8 +237,8 @@ Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classif
 
 Clasifiación con la base de datos de Silva (opcional)
 
-Descargar manualmente la base de datos: silva-138-99-nb-classifier.qza https://docs.qiime2.org/2023.9/data-resources/ o con wget 
-`wget https://data.qiime2.org/2023.9/common/silva-138-99-515-806-nb-classifier.qza`
+Descargar manualmente la base de datos Silva 138 99% OTUs full-length sequences: silva-138-99-nb-classifier.qza de https://docs.qiime2.org/2023.9/data-resources/ o 
+con wget `wget https://data.qiime2.org/2023.9/common/silva-138-99-515-806-nb-classifier.qza`
 
 ```
 qiime feature-classifier classify-sklearn \
@@ -248,8 +249,8 @@ qiime feature-classifier classify-sklearn \
 
 Clasificación con la base de datos de Greengenes actualizada al año 2022 (opcional)
 
-Descargar manualmente la base de datos: gg_2022_10_backbone_full_length.nb.qza
-
+Descargar manualmente la base de datos de Greengenes2 2022.10 full length sequences: gg_2022_10_backbone_full_length.nb.qza de https://docs.qiime2.org/2023.9/data-resources/ o 
+con wget `wget https://data.qiime2.org/2023.9/common/gg_2022_10_backbone_full_length.nb.qza`
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
