@@ -196,10 +196,10 @@ Arrastrar el artefacto demux-subsample.qzv a la página https://view.qiime2.org/
 
 #### Recorte e eliminación de ruido  
 Usaremos estos gráficos para determinar qué parámetros de recorte queremos usar para eliminar el ruido con DADA2 y luego eliminaremos el ruido de las lecturas usando dada2 denoise-paired
-```
 
+```
 qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs trimmed_sequences.qza \
+  --i-demultiplexed-seqs analysis/seqs_trimmed/trimmed_sequences.qza \
   --p-trim-left-f 0 \
   --p-trim-left-r 0 \
   --p-trunc-len-f 243 \
@@ -235,7 +235,9 @@ Step 2: Análisis taxonómico
 Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV) a la resolución más alta (99% de identidad) de acuerdo a la base de datos de SILVA y/o Greengenes 2022. 
 
 Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn. 
+
 Clasifiación con la base de datos de Silva (opcional)
+
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
