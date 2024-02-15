@@ -293,7 +293,7 @@ qiime taxa barplot \
 ```
 
 Step 3: Construir un árbol filogenético para el análisis de diversidad 
-
+---------------------------------------------------------------------
 mkdir analysis/tree  
 ```
 qiime phylogeny align-to-tree-mafft-fasttree \
