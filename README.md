@@ -233,7 +233,7 @@ Step 2: Análisis taxonómico
 
 Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV) a la resolución más alta (99% de identidad) de acuerdo a la base de datos de SILVA y/o Greengenes 2022. 
 
-bold // Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn. 
+**Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn.**
 
 
 Descargar manualmente la base de datos Silva 138 99% OTUs full-length sequences: silva-138-99-nb-classifier.qza de https://docs.qiime2.org/2023.9/data-resources/ o con wget 
