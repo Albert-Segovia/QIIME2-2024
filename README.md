@@ -189,8 +189,8 @@ qiime cutadapt trim-paired \
 Una vez eliminados los cebadores generaremos un artefacto de vusualización 
 ```
   qiime demux summarize \
-  --i-data demux-subsample.qza \
-  --o-visualization demux-subsample.qzv
+  --i-data analysis/seqs_trimmed/trimmed_sequences.qza \
+  --o-visualization trimmed-demux-subsample.qzv
 ```
 Arrastrar el artefacto demux-subsample.qzv a la página https://view.qiime2.org/
 
@@ -199,11 +199,11 @@ Usaremos estos gráficos para determinar qué parámetros de recorte queremos us
 ```
 
 qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs demux-subsample.qza \
-  --p-trim-left-f 6 \
-  --p-trim-left-r 6 \
-  --p-trunc-len-f 263 \
-  --p-trunc-len-r 221 \
+  --i-demultiplexed-seqs trimmed_sequences.qza \
+  --p-trim-left-f 0 \
+  --p-trim-left-r 0 \
+  --p-trunc-len-f 243 \
+  --p-trunc-len-r 200 \
   --o-table table.qza \
   --o-representative-sequences rep-seqs.qza \
   --o-denoising-stats denoising-stats.qza
