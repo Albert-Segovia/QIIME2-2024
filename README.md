@@ -61,7 +61,7 @@ Descargar e importar secuencias
 ----------------------------------------
 #### QIIME2 utiliza sus propios artefactos, por lo que es necesario importarlos a su entorno (opcional) 
 
-1. Crear una directorio de trabajo 
+1. Crear un directorio de trabajo 
 ```
 mkdir input 
 cd input
@@ -139,14 +139,10 @@ done
 
 ```
 
+3. Proporcionar permisos y realizar la descarga de las secuencias 
 ```
 chmod +777 download.sh  
 bash download.sh 
-```
-3. Salir de la carpeta input
-
-```
-cd ..
 ```
 
 ##### Importar los datos con Casava 1.8 paired-end demultiplexed fastq (opcional)
