@@ -1,0 +1,26 @@
+sample-id	barcode-sequence	body-site	year	month	day	subject	depth	days-since-experiment-start
+#q2:types	categorical	categorical	numeric	numeric	numeric	categorical	categorical	numeric
+APR_100		water	2018	4	5	subject-1	100	0
+APR_110		water	2018	4	5	subject-1	110	0
+APR_130		water	2018	4	5	subject-1	130	0
+APR_160		water	2018	4	5	subject-1	160	0
+APR_75		water	2018	4	5	subject-1	75	0
+APR_90		water	2018	4	5	subject-1	90	0
+JUN_100		water	2018	6	14	subject-2	100	60
+JUN_110		water	2018	6	14	subject-2	110	60
+JUN_130		water	2018	6	14	subject-2	130	60
+JUN_160		water	2018	6	14	subject-2	160	60
+JUN_75		water	2018	6	14	subject-2	75	60
+JUN_90		water	2018	6	14	subject-2	90	60
+AUG_100		water	2018	8	2	subject-3	100	120
+AUG_110		water	2018	8	2	subject-3	110	120
+AUG_130		water	2018	8	2	subject-3	130	120
+AUG_160		water	2018	8	2	subject-3	160	120
+AUG_75		water	2018	8	2	subject-3	75	120
+AUG_90		water	2018	8	2	subject-3	90	120
+OCT_100		water	2018	10	25	subject-4	100	240
+OCT_110		water	2018	10	25	subject-4	110	240
+OCT_130		water	2018	10	25	subject-4	130	240
+OCT_160		water	2018	10	25	subject-4	160	240
+OCT_75		water	2018	10	25	subject-4	75	240
+OCT_90		water	2018	10	25	subject-4	90	240
