@@ -267,6 +267,8 @@ qiime metadata tabulate \
 --o-visualization taxonomy_silva.qzv
 ```
 
+
+
 Filtre lecturas clasificadas como mitocondrias y cloroplastos. Los ASV no asignados se conservan. Genere un archivo de resumen visible de la nueva tabla para ver el efecto del filtrado.
 Según el desarrollador de QIIME, Nicholas Bokulich, el filtrado de baja abundancia (es decir, la eliminación de ASV que contienen muy pocas secuencias) no es necesario en el modelo ASV.
 ```
@@ -278,93 +280,6 @@ qiime taxa barplot \
 ```
 
 
-
-
-
-
-# Generar las visualizacion de los datos (QIIME 2 View)
-# A continuación, veremos la calidad de la secuencia 
-
-qiime demux summarize \
---i-data demux-paired-end.qza \
---o-visualization demux-paired-end.qzv
-
-
-
-
-
-
-
-
-# Análisis de Paired-end read 
-# gene 16S rRNA región V4 cebadores 515F/806R
-# Esto realiza el filtrado de calidad, la verificación de quimeras y la unión de lectura de Paired-end. 
-La acción denoise_paired requiere algunos parámetros que se establecerán en función de los gráficos de puntuación de calidad 
-de secuencia que se generaron previamente en el resumen de las lecturas de demultiplexación.
-# Generar y cuantificar variantes de secuencia de amplicón (ASV) con DADA2.
-# Tenemos que considerar los parámetros de recorte que queremos usar para eliminar el ruido con DADA2, 
-y luego eliminar el ruido de las lecturas usando dada2 denoise-paired. 
-
-qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs demux-paired-end.qza \
-  --p-trim-left-f 10 \     
-  --p-trim-left-r 10 \
-  --p-trunc-len-f 300 \
-  --p-trunc-len-r 300 \
-  --o-table table.qza \
-  --o-representative-sequences rep-seqs.qza \
-  --o-denoising-stats denoising-stats.qza
-
-# En este paso, tendrán ortefactos de vusualización que contienen la tabla de características, las secuencias de características correspondientes 
-y las estadísticas de eliminación de ruido de DADA2. Es necesario tener el archivo de metadatos. Se unieron a 253 pb.  
-Se puede generar resúmenes de estos de la siguiente manera:
- 
-qiime feature-table summarize \
-  --i-table table.qza \
-  --o-visualization table.qzv \
-  --m-sample-metadata-file sample-metadata.tsv
-
-qiime feature-table tabulate-seqs \
-  --i-data rep-seqs.qza \
-  --o-visualization rep-seqs.qzv
-
-qiime metadata tabulate \
-  --m-input-file denoising-stats.qza \
-  --o-visualization denoising-stats.qzv
-  
-# Asignacion taxonomica con clasificadores Naive Bayes entrenados usando -Greengenes
-
-qiime feature-classifier classify-sklearn \
---i-classifier gg-13-8-99-515-806-nb-classifier.qza \
---i-reads rep-seqs.qza \
---o-classification taxonomy_gg.qza
-
-# Generamos el archivo para visualizacion
-
-qiime metadata tabulate \
---m-input-file taxonomy_gg.qza \
---o-visualization taxonomy_gg.qzv
-
-# Generar grafica de barras apiladas con dos bases de datos 
-# taxonomy-barplot con gg
-
-qiime taxa barplot \
---i-table table.qza \
---i-taxonomy taxonomy_silva.qza \
---m-metadata-file sample-metadata.tsv \
---o-visualization taxa-bar-plots_gg.qzv
-
-# Asignacion taxonomica con clasificadores Naive Bayes entrenados usando -Silva  
-
-qiime feature-classifier classify-sklearn \
---i-classifier silva-138-99-515-806-nb-classifier.qza \
---i-reads rep-seqs.qza \
---o-classification taxonomy_silva.qza
-
-# Generamos el archivo para visualizacion
-qiime metadata tabulate \
---m-input-file taxonomy_silva.qza \
---o-visualization taxonomy_silva.qzv
 
 # Taxonomy-barplot con silva
 
