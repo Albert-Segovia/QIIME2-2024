@@ -234,7 +234,8 @@ Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classif
 
 Clasifiación con la base de datos de Silva (opcional)
 
-Descargar manualmente la base de datos: silva-138-99-nb-classifier.qza
+Descargar manualmente la base de datos: silva-138-99-nb-classifier.qza o con wget 
+`wget https://github.com/Albert-Segovia/QIIME2-2024/raw/0824741796065083f2335cb2b4cd1a4c7d4ef9dc/silva-138-99-nb-classifier.qza`
 ```
 qiime feature-classifier classify-sklearn \
 --i-classifier silva-138-99-nb-classifier.qza \
