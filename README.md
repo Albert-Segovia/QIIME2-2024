@@ -254,7 +254,8 @@ qiime feature-classifier classify-sklearn \
 --o-classification taxonomy_silva.qza
 ```
 
-Necesitará acceder a una clasificación precalculada por lo que debera descargar manualmente taxonomy_silva.qza. 
+Necesitará acceder a una clasificación precalculada por lo que deberá descargar manualmente taxonomy_silva.qza. 
+
 Generar el artefacto de visualización de las asignaciones taxonómicas
 
 ```
