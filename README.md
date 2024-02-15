@@ -149,7 +149,7 @@ bash download.sh
 cd ..
 ```
 
-##### Importar los datos Casava 1.8 paired-end demultiplexed fastq (opcional)
+##### Importar los datos con Casava 1.8 paired-end demultiplexed fastq (opcional)
 QIIME utiliza sus propios artefactos por lo que tendremos que impotarlos al ambiente de trabajo (usando Casava)
 
 ```
