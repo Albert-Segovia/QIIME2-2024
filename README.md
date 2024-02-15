@@ -175,7 +175,7 @@ Step 1: Limpieza y control de calidad de los datos
 #### Descargar el objeto demux-subsample.qza 
 
 ```
-https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/demux-subsample.qza
+wget https://github.com/Albert-Segovia/QIIME2-2024/blob/045ddd1ff5ee1bf532a3acdb2727a765c9684043/data/demux-subsample.qza
 ```
 #### Eliminar los cebadores 
 
