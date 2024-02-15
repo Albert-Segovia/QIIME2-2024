@@ -191,7 +191,7 @@ Una vez eliminados los cebadores generaremos un artefacto de vusualización
   --i-data analysis/seqs_trimmed/trimmed_sequences.qza \
   --o-visualization trimmed-demux-subsample.qzv
 ```
-Arrastrar el artefacto demux-subsample.qzv a la página https://view.qiime2.org/
+Realizar la visualización arrastrando el artefacto demux-subsample.qzv a la página https://view.qiime2.org/
 
 #### Recorte e eliminación de ruido  
 Usaremos estos gráficos para determinar qué parámetros de recorte queremos usar para eliminar el ruido con DADA2 y luego eliminaremos el ruido de las lecturas usando dada2 denoise-paired
