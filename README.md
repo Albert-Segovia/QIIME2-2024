@@ -283,26 +283,26 @@ qiime taxa barplot \
 --o-visualization taxa-bar-plots_silva.qzv
 ```
 
-
-
-# Taxonomy-barplot con silva
-
+Generaremos una Taxonomy-barplot con silva 
+```
 qiime taxa barplot \
 --i-table table.qza \
 --i-taxonomy taxonomy_silva.qza \
 --m-metadata-file sample-metadata.tsv \
 --o-visualization taxa-bar-plots_silva.qzv
+```
 
-# Reconstruccion filogenetica para los analisis de diversidad donde se genera un árbol 
+Step 3: Construir un árbol filogenético para el análisis de diversidad 
 
+mkdir analysis/tree  
+```
 qiime phylogeny align-to-tree-mafft-fasttree \
   --i-sequences rep-seqs.qza \
   --o-alignment aligned-rep-seqs.qza \
   --o-masked-alignment masked-aligned-rep-seqs.qza \
-  --o-tree unrooted-tree.qza \
-  --o-rooted-tree rooted-tree.qza
-
-
+  --o-tree analysis/tree/unrooted-tree.qza \
+  --o-rooted-tree analysis/tree/rooted-tree.qza
+```
 
 
 # Análisis de diversidad alfa y beta
