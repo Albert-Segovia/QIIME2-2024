@@ -308,10 +308,7 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-rooted-tree analysis/tree/rooted-tree.qza
 ```
 
-
-
-
-# Rarefacción 
+#### Rarefacción 
 
 ```
 qiime diversity alpha-rarefaction \
@@ -324,15 +321,18 @@ qiime diversity alpha-rarefaction \
 
 Step 4: Análisis de diversidad alfa y beta
 --------------------------------------------
-# Nota
-# La profundidad de muestreo de depende del resumen de la tabla de características de DADA2.
+
+***Nota**
+
+La profundidad de muestreo de depende del resumen de la tabla de características de DADA2.
+
 Aplique la lógica del párrafo anterior para ayudarlo a elegir una profundidad de muestreo uniforme.
 
 ```
 qiime diversity core-metrics-phylogenetic \
   --i-phylogeny rooted-tree.qza \
   --i-table table.qza \
-  --p-sampling-depth 208 \
+  --p-sampling-depth 1261 \
   --m-metadata-file sample-metadata.tsv \
   --output-dir core-metrics-results
 ```
