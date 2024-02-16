@@ -271,8 +271,6 @@ qiime metadata tabulate \
 --o-visualization taxonomy_silva.qzv
 ```
 
-
-
 Filtre lecturas clasificadas como mitocondrias y cloroplastos. Los ASV no asignados se conservan. Genere un archivo de resumen visible de la nueva tabla para ver el efecto del filtrado.
 Según el desarrollador de QIIME, Nicholas Bokulich, el filtrado de baja abundancia (es decir, la eliminación de ASV que contienen muy pocas secuencias) no es necesario en el modelo ASV.
 ```
@@ -291,6 +289,7 @@ qiime taxa barplot \
 --m-metadata-file sample-metadata.tsv \
 --o-visualization taxa-bar-plots_silva.qzv
 ```
+Realizar la visualización arrastrando el artefacto taxa-bar-plots_silva.qzv a la página https://view.qiime2.org/
 
 Step 3: Construir un árbol filogenético para el análisis de diversidad 
 ---------------------------------------------------------------------
@@ -308,8 +307,10 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-rooted-tree analysis/tree/rooted-tree.qza
 ```
 
+Sección 4: Visualizaciones y estadísticas básicas
 
-# Análisis de diversidad alfa y beta
+Análisis de diversidad alfa y beta
+
 # Nota
 # La profundidad de muestreo de 208 se eligió en función del resumen de la tabla de características de DADA2.
 
