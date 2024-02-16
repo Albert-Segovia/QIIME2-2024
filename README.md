@@ -298,6 +298,7 @@ Crear el directorio tree
 ```
 mkdir analysis/tree  
 ```
+
 ```
 qiime phylogeny align-to-tree-mafft-fasttree \
   --i-sequences rep-seqs.qza \
@@ -307,29 +308,31 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-rooted-tree analysis/tree/rooted-tree.qza
 ```
 
-Sección 4: Visualizaciones y estadísticas básicas
 
-Análisis de diversidad alfa y beta
 
-# Nota
-# La profundidad de muestreo de 208 se eligió en función del resumen de la tabla de características de DADA2.
-
-Aplique la lógica del párrafo anterior para ayudarlo a elegir una profundidad de muestreo uniforme.
-
-qiime diversity core-metrics-phylogenetic \
-  --i-phylogeny rooted-tree.qza \
-  --i-table table.qza \
-  --p-sampling-depth 208 \
-  --m-metadata-file sample-metadata.tsv \
-  --output-dir core-metrics-results
 
 # Rarefacción 
 
-
+```
 qiime diversity alpha-rarefaction \
 --i-table table.qza \
 --i-phylogeny rooted-tree.qza \
 --p-max-depth 130 \
 --m-metadata-file sample-metadata.tsv \
 --o-visualization alpha-rarefaction.qzv
+```
 
+Step 4: Análisis de diversidad alfa y beta
+--------------------------------------------
+# Nota
+# La profundidad de muestreo de depende del resumen de la tabla de características de DADA2.
+Aplique la lógica del párrafo anterior para ayudarlo a elegir una profundidad de muestreo uniforme.
+
+```
+qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny rooted-tree.qza \
+  --i-table table.qza \
+  --p-sampling-depth 208 \
+  --m-metadata-file sample-metadata.tsv \
+  --output-dir core-metrics-results
+```
