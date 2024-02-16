@@ -346,4 +346,4 @@ qiime diversity alpha-group-significance \
   --m-metadata-file sample-metadata.tsv \
   --o-visualization core-metrics-results/evenness-group-significance.qzv
 
-
+# Beta diversity NMDS. Non-metric Multidimensional Scaling plot (NMDS) depicting Bray–Curtis dissimilarity distance for ASVs diversity.
