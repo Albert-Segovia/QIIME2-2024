@@ -75,7 +75,7 @@ nano download.sh
 ```
 
 # URL base del repositorio en GitHub
-base_url="https://github.com/Albert-Segovia/QIIME2-2024/raw/0824741796065083f2335cb2b4cd1a4c7d4ef9dc/input/"
+base_url="https://github.com/Albert-Segovia/QIIME2-2024/raw/a501a29ee1ac24d9f4a16b0d43295bb696ea94f3/input/"
 # Lista de nombres de archivo
 archivos=(
 "GD10_S1_L001_R1_001.fastq.gz"  "GD16_S1_L001_R1_001.fastq.gz"  "MN13_S3_L001_R1_001.fastq.gz"  "MX11_S2_L001_R1_001.fastq.gz"
@@ -85,7 +85,6 @@ archivos=(
 "GD13_S1_L001_R1_001.fastq.gz"  "MN11_S3_L001_R1_001.fastq.gz"  "MX10_S2_L001_R1_001.fastq.gz"  "MX16_S2_L001_R1_001.fastq.gz"
 "GD13_S1_L001_R2_001.fastq.gz"  "MN11_S3_L001_R2_001.fastq.gz"  "MX10_S2_L001_R2_001.fastq.gz"  "MX16_S2_L001_R2_001.fastq.gz"
 )
-
 
 # Descargar cada archivo en la lista
 for archivo in "${archivos[@]}"; do
