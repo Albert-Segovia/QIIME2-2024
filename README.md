@@ -150,17 +150,7 @@ qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
   --input-path input \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
-  --output-path demux-paired-end-full.qza
-```
-
-#### Submuestreo de los datos para el ejercicio (opcional)
-Realizaremos el sumbmuestreo de los datos para facilitar el análisis 
-```
-
-qiime demux subsample-paired \
-  --i-sequences demux-paired-end-full.qza \
-  --p-fraction 0.1 \
-  --o-subsampled-sequences demux-subsample.qza
+  --output-path demux-paired.qza
 ```
 
 Step 1: Limpieza y control de calidad de los datos 
@@ -176,7 +166,7 @@ En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que se deb
 
 ```
 qiime cutadapt trim-paired \
---i-demultiplexed-sequences demux-subsample.qza \
+--i-demultiplexed-sequences demux-paired.qza \
 --p-front-f ACGCGHNRAACCTTACC \
 --p-front-r ACGGGCRGTGWGTRCAA \
 --p-error-rate 0.1 \
