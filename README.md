@@ -112,10 +112,10 @@ qiime tools import \
 
 Step 1: Limpieza y control de calidad de los datos 
 -----------------------------------------------
-#### Descargar manualmente el objeto demux-subsample.qza (importante) 
+#### Descargar manualmente el objeto demux-paired.qza (importante) 
 https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-subsample.qza o con:
 ```
-wget https://github.com/Albert-Segovia/QIIME2-2024/raw/0824741796065083f2335cb2b4cd1a4c7d4ef9dc/demux-subsample.qza
+wget https://github.com/Albert-Segovia/QIIME2-2024/raw/a501a29ee1ac24d9f4a16b0d43295bb696ea94f3/demux-paired.qza
 ```
 #### Eliminar los cebadores 
 
@@ -124,9 +124,9 @@ En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que se deb
 ```
 qiime cutadapt trim-paired \
 --i-demultiplexed-sequences demux-paired.qza \
---p-front-f ACGCGHNRAACCTTACC \
---p-front-r ACGGGCRGTGWGTRCAA \
---p-error-rate 0.1 \
+--p-front-f CCTACGGGNGGCWGCAG \
+--p-front-r GACTACHVGGGTATCTAATCC \
+--p-error-rate 0.2 \
 --output-dir analysis/seqs_trimmed \
 --verbose
 ```
@@ -136,7 +136,7 @@ Una vez eliminados los cebadores generaremos un artefacto de vusualización
 ```
   qiime demux summarize \
   --i-data analysis/seqs_trimmed/trimmed_sequences.qza \
-  --o-visualization trimmed-demux-subsample.qzv
+  --o-visualization trimmed-demux-paired.qzv
 ```
 Realizar la visualización arrastrando el artefacto demux-subsample.qzv a la página https://view.qiime2.org/
 
