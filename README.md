@@ -109,6 +109,7 @@ qiime tools import \
      --p-fraction 0.05 \
      --o-subsampled-sequences demux-subsample.qza
 ```
+```
    qiime demux summarize \
      --i-data demux-subsample.qza \
      --o-visualization demux-subsample.qzv
