@@ -15,7 +15,7 @@ es una plataforma bioinformática para el análisis integral y totalmente reprod
 
 Descripción conceptual de QIIME2
 ----------------------------------------
-
+\
 Examinemos una descripción general conceptual de los distintos flujos de trabajo posibles para examinar los datos de secuencias de amplicones:
 
 ![](https://docs.qiime2.org/2023.9/_images/overview.png)
@@ -189,27 +189,24 @@ Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Varian
 **Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn.**
 
 
-Descargar manualmente la base de datos Silva 138 99% OTUs full-length sequences: silva-138-99-nb-classifier.qza de https://docs.qiime2.org/2023.9/data-resources/ o con wget 
-```
-wget https://data.qiime2.org/2023.9/common/silva-138-99-515-806-nb-classifier.qza
-```
-Clasifiación con la base de datos de Silva (opcional)
-```
-qiime feature-classifier classify-sklearn \
---i-classifier silva-138-99-nb-classifier.qza \
---i-reads rep-seqs.qza \
---o-classification taxonomy_silva.qza
-```
+Descargar manualmente la base de datos Silva 138 99% OTUs full-length sequences: Greengenes2 2022.10 from 515F/806R region of sequences de https://docs.qiime2.org/2023.9/data-resources/ 
 
-
-Descargar manualmente la base de datos de Greengenes2 2022.10 full length sequences: gg_2022_10_backbone_full_length.nb.qza de https://docs.qiime2.org/2023.9/data-resources/ o con wget 
-```
-wget https://data.qiime2.org/2023.9/common/gg_2022_10_backbone_full_length.nb.qza
-```
 Clasificación con la base de datos de Greengenes actualizada al año 2022 (opcional)
+
 ```
 qiime feature-classifier classify-sklearn \
---i-classifier silva-138-99-nb-classifier.qza \
+--i-classifier gg_2022_10_backbone.v4.nb.qza \
+--i-reads rep-seqs.qza \
+--o-classification taxonomy_gg.qza
+```
+
+Descargar manualmente la base de datos de Silva: Silva 138 99% OTUs from 515F/806R region of sequences de https://docs.qiime2.org/2023.9/data-resources/ 
+
+```
+Clasificación con la base de datos de Silva (opcional)
+```
+qiime feature-classifier classify-sklearn \
+--i-classifier silva-138-99-515-806-nb-classifier.qza \
 --i-reads rep-seqs.qza \
 --o-classification taxonomy_silva.qza
 ```
