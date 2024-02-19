@@ -158,10 +158,10 @@ Usaremos estos gráficos para determinar qué parámetros de recorte queremos us
 ```
 qiime dada2 denoise-paired \
   --i-demultiplexed-seqs analysis/seqs_trimmed/trimmed_sequences.qza \
-  --p-trim-left-f 19 \
-  --p-trim-left-r 7 \
-  --p-trunc-len-f 277 \
-  --p-trunc-len-r 195 \
+  --p-trim-left-f 0 \
+  --p-trim-left-r 0 \
+  --p-trunc-len-f 260 \
+  --p-trunc-len-r 175 \
   --o-table table.qza \
   --o-representative-sequences rep-seqs.qza \
   --o-denoising-stats denoising-stats.qza
