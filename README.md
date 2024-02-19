@@ -109,13 +109,25 @@ qiime tools import \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
   --output-path demux-paired.qza
 ```
+##### Realizar el submuestreo de las lecturas de un estudio (opcional)
+   
+   qiime demux subsample-paired \
+     --i-sequences demux-full.qza \
+     --p-fraction 0.1 \
+     --o-subsampled-sequences demux-subsample.qza
+
+   qiime demux summarize \
+     --i-data demux-subsample.qza \
+     --o-visualization demux-subsample.qzv
+
 
 Step 1: Limpieza y control de calidad de los datos 
 -----------------------------------------------
 #### Descargar manualmente el objeto demux-paired.qza (importante) 
-https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-subsample.qza o con:
+https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-paired.qza o con:
+
 ```
-wget https://github.com/Albert-Segovia/QIIME2-2024/raw/a501a29ee1ac24d9f4a16b0d43295bb696ea94f3/demux-paired.qza
+base_url="https://github.com/Albert-Segovia/QIIME2-2024/raw/a501a29ee1ac24d9f4a16b0d43295bb696ea94f3/demux-paired.qza
 ```
 #### Eliminar los cebadores 
 
@@ -134,7 +146,7 @@ qiime cutadapt trim-paired \
 #### Crear objetos de visualización e interpretar la calidad de las secuencias
 Una vez eliminados los cebadores generaremos un artefacto de vusualización 
 ```
-  qiime demux summarize \
+qiime demux summarize \
   --i-data analysis/seqs_trimmed/trimmed_sequences.qza \
   --o-visualization trimmed-demux-paired.qzv
 ```
@@ -146,10 +158,10 @@ Usaremos estos gráficos para determinar qué parámetros de recorte queremos us
 ```
 qiime dada2 denoise-paired \
   --i-demultiplexed-seqs analysis/seqs_trimmed/trimmed_sequences.qza \
-  --p-trim-left-f 0 \
-  --p-trim-left-r 0 \
-  --p-trunc-len-f 243 \
-  --p-trunc-len-r 200 \
+  --p-trim-left-f 19 \
+  --p-trim-left-r 7 \
+  --p-trunc-len-f 277 \
+  --p-trunc-len-r 195 \
   --o-table table.qza \
   --o-representative-sequences rep-seqs.qza \
   --o-denoising-stats denoising-stats.qza
