@@ -20,9 +20,9 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 
 ![](https://docs.qiime2.org/2023.9/_images/overview.png)
 
-Las muestras obtenidas de este ejercicio fueron tomadas en Saanich Inlet que es un fiordo estacionalmente euxínico ubicado en la isla de Vancouver, Canadá, que se caracteriza por cambios estacionales y extremos generados por gradientes redox de la columna de agua, que son impulsados por ciclos de producción primaria y mezcla física. Igualmente, la ensenada se distingue por tener zonas marinas con deficiencia de oxígeno (ODZ) por sus profundidades restringidas (~225 m como máximo) y la presencia de aguas de fondo sulfurosas durante gran parte del año.
+Las muestras obtenidas de este ejercicio fueron tomadas de veinte localidades en aguas mexicanas del Golfo de México a diferentes profundidades. Nosotros utilizaremos una pequeña cantidad de los datos, 9 de las 57 muestras. Además los mismos serán submuestreados por lo que trabajaremos con una fracción de los datos de amplicones de la región V3–V4 del 16S rRNA obtenidos en la plataforma ILLUMINA MiSeq paired-end (2 × 300 bp) demultiplexados en fomato FASTQ. Los datos originales se encuentran depositados en NCBI bajo el BioProject PRJNA609564 (SAMN14259149-SAMN14259166, SAMN14255300-SAMN14255357), y PRJNA380945 (SAMN06649846) del artículo "Metagenomic Profiling and Microbial Metabolic Potential of Perdido Fold Belt (NW) and Campeche Knolls (SE) in the Gulf of Mexico" [(Raggi et al., 2020)](https://doi.org/10.3389/fmicb.2020.01825).
 
-Trabajaremos con una fracción de los datos de amplicones de la región V6-V8 del 16S rRNA obtenidos en la plataforma ILLUMINA MiSeq (2 x 300 pb) con formato FASTQ. Además que se encuentran como paired-end (R1 y R2) y demultiplexados. Los datos originales se encuentran depositados en NCBI bajo el BioProject PRJNA901178 y en [PANGEA](https://doi.org/10.1594/PANGAEA.912191) del artículo "Network analysis of 16S rRNA sequences suggests microbial keystone taxa contribute to marine N2O cycling" [(Jameson et al., 2023)](https://www.nature.com/articles/s42003-023-04597-5).
+![](https://www.frontiersin.org/files/Articles/562255/fmicb-11-01825-HTML/image_m/fmicb-11-01825-g001.jpg)
 
 Instalación de QIIME 2 
 --------------------------------------
