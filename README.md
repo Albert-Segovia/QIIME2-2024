@@ -121,7 +121,7 @@ Step 1: Limpieza y control de calidad de los datos
 https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-paired.qza o con:
 
 ```
-base_url="https://github.com/Albert-Segovia/QIIME2-2024/raw/a501a29ee1ac24d9f4a16b0d43295bb696ea94f3/demux-paired.qza
+wget https://github.com/Albert-Segovia/QIIME2-2024/raw/5205277c905ad2bcab5375a20ca7475984b38edd/demux-subsample.qza
 ```
 #### Eliminar los cebadores 
 
