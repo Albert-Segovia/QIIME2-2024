@@ -101,12 +101,12 @@ qiime tools import \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
   --output-path demux-paired.qza
 ```
-##### Realizar el submuestreo del 0.5 % de las lecturas (opcional)
+##### Realizar el submuestreo del 0.2 % (11 Mb) de las lecturas (opcional)
 
 ```   
    qiime demux subsample-paired \
      --i-sequences demux-paired.qza \
-     --p-fraction 0.05 \
+     --p-fraction 0.02 \
      --o-subsampled-sequences demux-subsample.qza
 ```
 ```
