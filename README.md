@@ -66,10 +66,9 @@ Descargar e importar secuencias
 mkdir input 
 cd input
 ```
-2.  Copiar el escript download dentro de archivo download.sh y concederle permisos de ejecución
-
+2.  Descargar todos los archivos desde dropbox.com 
 ```
-nano download.sh
+(https://www.dropbox.com/scl/fo/5nu784fhq7zt2dexcbtz9/h?rlkey=79cexfd45te5y0adi0djbp6cw&dl=0)
 ```
 
 ```
