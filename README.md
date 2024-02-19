@@ -66,38 +66,31 @@ Descargar e importar secuencias
 mkdir input 
 cd input
 ```
-2.  Descargar todos los archivos desde dropbox.com 
+2.  Descargar todos los archivos desde [dropbox.com ](https://www.dropbox.com/)
 ```
-(https://www.dropbox.com/scl/fo/5nu784fhq7zt2dexcbtz9/h?rlkey=79cexfd45te5y0adi0djbp6cw&dl=0)
+`https://www.dropbox.com/scl/fo/5nu784fhq7zt2dexcbtz9/h?rlkey=79cexfd45te5y0adi0djbp6cw&dl=0`
 ```
-
+3. Nombre de los datos (542Mb)
 ```
-
-# URL base del repositorio en GitHub
-base_url="https://github.com/Albert-Segovia/QIIME2-2024/raw/a501a29ee1ac24d9f4a16b0d43295bb696ea94f3/input/"
-# Lista de nombres de archivo
-archivos=(
-"GD10_S1_L001_R1_001.fastq.gz"  "GD16_S1_L001_R1_001.fastq.gz"  "MN13_S3_L001_R1_001.fastq.gz"  "MX11_S2_L001_R1_001.fastq.gz"
-"GD10_S1_L001_R2_001.fastq.gz"  "GD16_S1_L001_R2_001.fastq.gz"  "MN13_S3_L001_R2_001.fastq.gz"  "MX11_S2_L001_R2_001.fastq.gz"
-"GD11_S1_L001_R1_001.fastq.gz"  "MN10_S3_L001_R1_001.fastq.gz"  "MN16_S3_L001_R1_001.fastq.gz"  "MX13_S2_L001_R1_001.fastq.gz"
-"GD11_S1_L001_R2_001.fastq.gz"  "MN10_S3_L001_R2_001.fastq.gz"  "MN16_S3_L001_R2_001.fastq.gz"  "MX13_S2_L001_R2_001.fastq.gz"
-"GD13_S1_L001_R1_001.fastq.gz"  "MN11_S3_L001_R1_001.fastq.gz"  "MX10_S2_L001_R1_001.fastq.gz"  "MX16_S2_L001_R1_001.fastq.gz"
-"GD13_S1_L001_R2_001.fastq.gz"  "MN11_S3_L001_R2_001.fastq.gz"  "MX10_S2_L001_R2_001.fastq.gz"  "MX16_S2_L001_R2_001.fastq.gz"
-)
-
-# Descargar cada archivo en la lista
-for archivo in "${archivos[@]}"; do
-    wget --restrict-file-names=ascii "${base_url}${archivo}"
-done
+GD11_S1_L001_R1_001.fastq.gz
+GD11_S1_L001_R2_001.fastq.gz
+GD13_S1_L001_R1_001.fastq.gz
+GD13_S1_L001_R2_001.fastq.gz
+GD16_S1_L001_R1_001.fastq.gz
+GD16_S1_L001_R2_001.fastq.gz
+MN11_S3_L001_R1_001.fastq.gz
+MN11_S3_L001_R2_001.fastq.gz
+MN13_S3_L001_R1_001.fastq.gz
+MN13_S3_L001_R2_001.fastq.gz
+MN16_S3_L001_R2_001.fastq.gz
+MN16_s3_L001_R1_001.fastq.gz
+MX11_S2_L001_R1_001.fastq.gz
+MX11_S2_L001_R2_001.fastq.gz
+MX13_S2_L001_R1_001.fastq.gz
+MX13_S2_L001_R2_001.fastq.gz
+MX16_S2_L001_R1_001.fastq.gz
+MX16_S2_L001_R2_001.fastq.gz
 ```
-
-3. Proporcionar permisos y realizar la descarga de las secuencias 
-```
-chmod +777 download.sh  
-bash download.sh 
-```
-4. Se pueden descargar de manera manual pero tomaría demasiado tiempo (no es recomendable). 
-
 ##### Importar los datos con Casava 1.8 paired-end demultiplexed fastq (opcional)
 QIIME utiliza sus propios artefactos por lo que tendremos que impotarlos al ambiente de trabajo (usando Casava)
 
