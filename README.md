@@ -281,7 +281,7 @@ Aplique la lógica del párrafo anterior para ayudarlo a elegir una profundidad 
 qiime diversity core-metrics-phylogenetic \
   --i-phylogeny analysis/tree/rooted-tree.qza \
   --i-table table.qza \
-  --p-sampling-depth 1129 \
+  --p-sampling-depth 229 \
   --m-metadata-file sample-metadata.tsv \
   --output-dir core-metrics-results
 
