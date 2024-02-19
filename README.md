@@ -155,7 +155,7 @@ qiime dada2 denoise-paired \
   --p-trim-left-f 0 \
   --p-trim-left-r 0 \
   --p-trunc-len-f 260 \
-  --p-trunc-len-r 175 \
+  --p-trunc-len-r 174 \
   --o-table table.qza \
   --o-representative-sequences rep-seqs.qza \
   --o-denoising-stats denoising-stats.qza
