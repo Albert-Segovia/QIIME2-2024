@@ -139,6 +139,7 @@ qiime cutadapt trim-paired \
 
 #### Crear objetos de visualización e interpretar la calidad de las secuencias
 Una vez eliminados los cebadores generaremos un artefacto de vusualización 
+
 ```
 qiime demux summarize \
   --i-data analysis/seqs_trimmed/trimmed_sequences.qza \
@@ -202,7 +203,7 @@ qiime feature-classifier classify-sklearn \
 
 Descargar manualmente la base de datos de Silva: Silva 138 99% OTUs from 515F/806R region of sequences de https://docs.qiime2.org/2023.9/data-resources/ 
 
-```
+
 Clasificación con la base de datos de Silva (opcional)
 ```
 qiime feature-classifier classify-sklearn \
@@ -217,8 +218,8 @@ Generar el artefacto de visualización de las asignaciones taxonómicas
 
 ```
 qiime metadata tabulate \
---m-input-file taxonomy_silva.qza \
---o-visualization taxonomy_silva.qzv
+--m-input-file taxonomy_gg.qza \
+--o-visualization taxonomy_gg.qzv
 ```
 
 Filtre lecturas clasificadas como mitocondrias y cloroplastos. Los ASV no asignados se conservan. Genere un archivo de resumen visible de la nueva tabla para ver el efecto del filtrado.
@@ -226,9 +227,9 @@ Según el desarrollador de QIIME, Nicholas Bokulich, el filtrado de baja abundan
 ```
 qiime taxa barplot \
 --i-table table.qza \
---i-taxonomy taxonomy_silva.qza \
+--i-taxonomy taxonomy_gg.qza \
 --m-metadata-file sample-metadata.tsv \
---o-visualization taxa-bar-plots_silva.qzv
+--o-visualization taxa-bar-plots_gg.qzv
 ```
 
 Generaremos una Taxonomy-barplot con silva 
