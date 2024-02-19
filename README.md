@@ -135,7 +135,7 @@ En ocasiones las secuencias aún tienen los cebadores adjuntos por lo que se deb
 
 ```
 qiime cutadapt trim-paired \
---i-demultiplexed-sequences demux-paired.qza \
+--i-demultiplexed-sequences demux-subsample.qza \
 --p-front-f CCTACGGGNGGCWGCAG \
 --p-front-r GACTACHVGGGTATCTAATCC \
 --p-error-rate 0.2 \
