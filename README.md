@@ -112,7 +112,7 @@ qiime tools import \
 ##### Realizar el submuestreo de las lecturas de un estudio (opcional)
    
    qiime demux subsample-paired \
-     --i-sequences demux-full.qza \
+     --i-sequences demux-paired.qza \
      --p-fraction 0.1 \
      --o-subsampled-sequences demux-subsample.qza
 
