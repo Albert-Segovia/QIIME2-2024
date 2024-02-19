@@ -102,16 +102,17 @@ qiime tools import \
   --output-path demux-paired.qza
 ```
 ##### Realizar el submuestreo de las lecturas de un estudio (opcional)
-   
+
+```   
    qiime demux subsample-paired \
      --i-sequences demux-paired.qza \
-     --p-fraction 0.1 \
+     --p-fraction 0.05 \
      --o-subsampled-sequences demux-subsample.qza
-
+```
    qiime demux summarize \
      --i-data demux-subsample.qza \
      --o-visualization demux-subsample.qzv
-
+```
 
 Step 1: Limpieza y control de calidad de los datos 
 -----------------------------------------------
