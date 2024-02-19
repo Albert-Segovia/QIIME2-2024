@@ -273,7 +273,7 @@ qiime phylogeny align-to-tree-mafft-fasttree \
 qiime diversity alpha-rarefaction \
 --i-table table.qza \
 --i-phylogeny rooted-tree.qza \
---p-max-depth 130 \
+--p-max-depth 1129 \
 --m-metadata-file sample-metadata.tsv \
 --o-visualization alpha-rarefaction.qzv
 ```
@@ -289,7 +289,7 @@ Aplique la lógica del párrafo anterior para ayudarlo a elegir una profundidad 
 qiime diversity core-metrics-phylogenetic \
   --i-phylogeny analysis/tree/rooted-tree.qza \
   --i-table table.qza \
-  --p-sampling-depth 577 \
+  --p-sampling-depth 1129 \
   --m-metadata-file sample-metadata.tsv \
   --output-dir core-metrics-results
 ```
