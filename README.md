@@ -101,7 +101,7 @@ qiime tools import \
   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
   --output-path demux-paired.qza
 ```
-##### Realizar el submuestreo del 0.2 % (11 Mb) de las lecturas (opcional)
+##### Realizar el submuestreo del 0.02 % (11 Mb) de las lecturas (opcional)
 
 ```   
    qiime demux subsample-paired \
@@ -118,7 +118,7 @@ qiime tools import \
 Step 1: Limpieza y control de calidad de los datos 
 -----------------------------------------------
 #### Descargar manualmente el objeto demux-paired.qza (importante) 
-https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-paired.qza o con:
+https://github.com/Albert-Segovia/QIIME2-2024/blob/main/demux-subsample.qza o con:
 
 ```
 wget https://github.com/Albert-Segovia/QIIME2-2024/raw/5205277c905ad2bcab5375a20ca7475984b38edd/demux-subsample.qza
