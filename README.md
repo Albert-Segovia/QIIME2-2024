@@ -67,9 +67,9 @@ mkdir input
 cd input
 ```
 2.  Descargar todos los archivos desde [dropbox.com ](https://www.dropbox.com/)
-```
-`https://www.dropbox.com/scl/fo/5nu784fhq7zt2dexcbtz9/h?rlkey=79cexfd45te5y0adi0djbp6cw&dl=0`
-```
+
+https://www.dropbox.com/scl/fo/5nu784fhq7zt2dexcbtz9/h?rlkey=79cexfd45te5y0adi0djbp6cw&dl=0
+
 3. Nombre de los datos (542Mb)
 ```
 GD11_S1_L001_R1_001.fastq.gz
