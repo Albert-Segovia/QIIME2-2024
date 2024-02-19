@@ -292,15 +292,12 @@ qiime diversity core-metrics-phylogenetic \
   --p-sampling-depth 1129 \
   --m-metadata-file sample-metadata.tsv \
   --output-dir core-metrics-results
-```
 
-```
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/faith_pd_vector.qza \
   --m-metadata-file sample-metadata.tsv \
   --o-visualization core-metrics-results/faith-pd-group-significance.qzv
-```
-```
+
 qiime diversity alpha-group-significance \
   --i-alpha-diversity core-metrics-results/evenness_vector.qza \
   --m-metadata-file sample-metadata.tsv \
