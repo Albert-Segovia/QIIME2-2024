@@ -265,7 +265,7 @@ qiime phylogeny align-to-tree-mafft-fasttree \
 qiime diversity alpha-rarefaction \
 --i-table table.qza \
 --i-phylogeny analysis/tree/rooted-tree.qza \
---p-max-depth 1129 \
+--p-max-depth 229 \
 --m-metadata-file sample-metadata.tsv \
 --o-visualization alpha-rarefaction.qzv
 ```
