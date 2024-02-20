@@ -20,7 +20,7 @@ Examinemos una descripción general conceptual de los distintos flujos de trabaj
 
 ![](https://docs.qiime2.org/2023.9/_images/overview.png)
 
-Las muestras obtenidas de este ejercicio fueron tomadas de veinte localidades en aguas mexicanas del Golfo de México a diferentes profundidades. Nosotros utilizaremos una pequeña cantidad de los datos, 9 de las 57 muestras. Además los mismos serán submuestreados por lo que trabajaremos con una fracción de los datos de amplicones de la región V3–V4 del 16S rRNA obtenidos en la plataforma ILLUMINA MiSeq paired-end (2 × 300 bp) demultiplexados en fomato FASTQ. Los datos originales se encuentran depositados en NCBI bajo el BioProject PRJNA609564 (SAMN14259149-SAMN14259166, SAMN14255300-SAMN14255357), y PRJNA380945 (SAMN06649846) del artículo "Metagenomic Profiling and Microbial Metabolic Potential of Perdido Fold Belt (NW) and Campeche Knolls (SE) in the Gulf of Mexico" [(Raggi et al., 2020)](https://doi.org/10.3389/fmicb.2020.01825).
+Las muestras obtenidas de este ejercicio fueron tomadas de veinte localidades en aguas mexicanas del Golfo de México a diferentes profundidades. Nosotros utilizaremos una pequeña cantidad de los datos, 9 de las 57 muestras. Además, los mismos serán submuestreados por lo que trabajaremos con una fracción de los datos de amplicones de la región V3–V4 del 16S rRNA obtenidos en la plataforma ILLUMINA MiSeq paired-end (2 × 300 bp) demultiplexados en formato FASTQ. Los datos originales se encuentran depositados en NCBI bajo el BioProject PRJNA609564 (SAMN14259149-SAMN14259166, SAMN14255300-SAMN14255357), y PRJNA380945 (SAMN06649846) del artículo "Metagenomic Profiling and Microbial Metabolic Potential of Perdido Fold Belt (NW) and Campeche Knolls (SE) in the Gulf of Mexico" [(Raggi et al., 2020)](https://doi.org/10.3389/fmicb.2020.01825).
 
 ![](https://www.frontiersin.org/files/Articles/562255/fmicb-11-01825-HTML/image_m/fmicb-11-01825-g001.jpg)
 
@@ -138,7 +138,7 @@ qiime cutadapt trim-paired \
 ```
 
 #### Crear objetos de visualización e interpretar la calidad de las secuencias
-Una vez eliminados los cebadores generaremos un artefacto de vusualización 
+Una vez eliminados los cebadores generaremos un artefacto de visualización 
 
 ```
 qiime demux summarize \
@@ -164,7 +164,7 @@ qiime dada2 denoise-paired \
 
 #### Generar archivos de resumen
 
-En este paso se generaran los ortefactos de vusualización que contienen la tabla de características, las secuencias de características correspondientes y las estadísticas de eliminación de ruido de DADA2. 
+En este paso se generarán los artefactos de visualización que contienen la tabla de características, las secuencias de características correspondientes y las estadísticas de eliminación de ruido de DADA2. 
 Es necesario tener el archivo de metadatos. Descargar manualmente el sample-metadata.tsv.  
 
 ```
@@ -185,7 +185,7 @@ qiime metadata tabulate \
 Step 2: Análisis taxonómico
 -----------------------------------------------
 
-Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV) a la resolución más alta (99% de identidad) de acuerdo a la base de datos de SILVA y/o Greengenes 2022. 
+Clasificaremos cada lectura idéntica o variante de los Amplicon Sequence Variant (ASV) a la resolución más alta (99% de identidad) de acuerdo con la base de datos de SILVA y/o Greengenes 2022. 
 
 **Debido a limitaciones del taller, NO ejecute el qiime feature-classifier classify-sklearn.**
 
@@ -273,7 +273,7 @@ qiime diversity alpha-rarefaction \
 Step 4: Análisis de diversidad alfa y beta
 --------------------------------------------
 
-***Nota** La profundidad de muestreo de depende del resumen de la tabla de características de DADA2.
+***Nota** La profundidad de muestreo depende del resumen de la tabla de características de DADA2.
 
 Aplique la lógica del párrafo anterior para ayudarlo a elegir una profundidad de muestreo uniforme.
 
