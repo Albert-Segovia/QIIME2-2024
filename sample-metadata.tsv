@@ -1,0 +1,11 @@
+sample-id	barcode-sequence	body-site	year	month	day	subject	depth
+#q2:types	categorical	categorical	numeric	numeric	numeric	categorical	categorical
+GD16	S1	DEEP	2016	1	1	subject-1	160
+GD13	S1	DEEP	2016	1	1	subject-1	130
+GD11	S1	DEEP	2016	1	1	subject-1	110
+MX16	S2	MAX	2016	2	2	subject-2	160
+MX13	S2	MAX	2016	2	2	subject-2	130
+MX11	S2	MAX	2016	2	2	subject-2	110
+MN11	S3	MIN	2016	3	3	subject-3	110
+MN13	S3	MIN	2016	3	3	subject-3	130
+MN16	S3	MIN	2016	3	3	subject-3	110
