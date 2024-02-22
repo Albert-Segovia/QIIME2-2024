@@ -296,7 +296,7 @@ qiime diversity alpha-group-significance \
 ```
 Mediremos la diversidad alfa como la riqueza observada (número de taxones) o la uniformidad (la abundancia relativa de esos taxones) de una muestra promedio dentro de un tipo de ambiente (sin rarefacción).
 
-Indice de Chao1
+Índice de Chao1
 ```
 qiime diversity alpha \
 --i-table table.qza \
@@ -307,7 +307,7 @@ qiime metadata tabulate \
 --m-input-file chao1.qza \
 --o-visualization chao1.qzv
 ```
-Indice de Shannon 
+Índice de Shannon 
 ```
 qiime diversity alpha \
 --i-table table.qza \
@@ -318,7 +318,7 @@ qiime metadata tabulate \
 --m-input-file shannon.qza \
 --o-visualization shannon.qzv
 ```
-Indice de Simpson 
+Índice de Simpson 
 ```
 qiime diversity alpha \
 --i-table table.qza \
@@ -328,7 +328,6 @@ qiime diversity alpha \
 qiime metadata tabulate \
 --m-input-file simpson.qza \
 --o-visualization simpson.qzv
-
 ```
 
 **El Análisis de Coordenadas Principales (Principal Coordinates Analysis) de beta diversidad. 
