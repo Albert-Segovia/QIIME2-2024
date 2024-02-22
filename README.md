@@ -212,7 +212,7 @@ qiime feature-classifier classify-sklearn \
 --o-classification taxonomy_silva.qza
 ```
 
-**Necesitará acceder a una clasificación precalculada por lo que deberá descargar manualmente taxonomy_silva.qza.** 
+**Necesitará acceder a una clasificación precalculada por lo que deberá descargar manualmente taxonomy_gg.qzv.** 
 
 Generar el artefacto de visualización de las asignaciones taxonómicas
 
@@ -222,8 +222,7 @@ qiime metadata tabulate \
 --o-visualization taxonomy_gg.qzv
 ```
 
-Filtre lecturas clasificadas como mitocondrias y cloroplastos. Los ASV no asignados se conservan. Genere un archivo de resumen visible de la nueva tabla para ver el efecto del filtrado.
-Según el desarrollador de QIIME, Nicholas Bokulich, el filtrado de baja abundancia (es decir, la eliminación de ASV que contienen muy pocas secuencias) no es necesario en el modelo ASV.
+Generaremos una Taxonomy-barplot con Grengenes (2022)
 ```
 qiime taxa barplot \
 --i-table table.qza \
