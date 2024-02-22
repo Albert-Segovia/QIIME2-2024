@@ -294,7 +294,39 @@ qiime diversity alpha-group-significance \
   --m-metadata-file sample-metadata.tsv \
   --o-visualization core-metrics-results/evenness-group-significance.qzv
 ```
+Mediremos la diversidad alfa como la riqueza observada (número de taxones) o la uniformidad (la abundancia relativa de esos taxones) de una muestra promedio dentro de un tipo de ambiente.  
 
+Indeces Chao1, Shannon y Simpson 
+```
+
+qiime diversity alpha \
+--i-table table.qza \
+--p-metric chao1 \
+--o-alpha-diversity chao1.qza
+
+qiime metadata tabulate \
+--m-input-file chao1.qza \
+--o-visualization chao1.qzv
+
+qiime diversity alpha \
+--i-table table.qza \
+--p-metric shannon \
+--o-alpha-diversity shannon.qza
+
+qiime metadata tabulate \
+--m-input-file shannon.qza \
+--o-visualization shannon.qzv
+
+qiime diversity alpha \
+--i-table table.qza \
+--p-metric simpson \
+--o-alpha-diversity simpson.qza
+
+qiime metadata tabulate \
+--m-input-file simpson.qza \
+--o-visualization simpson.qzv
+
+```
 
 **El Análisis de Coordenadas Principales (Principal Coordinates Analysis) de beta diversidad. 
 La gráfica de PCoA representa la distancia de disimilitud de Bray-Curtis no ponderada para la diversidad de secuencias de amplicones (ASVs).** 
