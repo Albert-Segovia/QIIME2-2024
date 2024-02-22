@@ -294,11 +294,10 @@ qiime diversity alpha-group-significance \
   --m-metadata-file sample-metadata.tsv \
   --o-visualization core-metrics-results/evenness-group-significance.qzv
 ```
-Mediremos la diversidad alfa como la riqueza observada (número de taxones) o la uniformidad (la abundancia relativa de esos taxones) de una muestra promedio dentro de un tipo de ambiente.  
+Mediremos la diversidad alfa como la riqueza observada (número de taxones) o la uniformidad (la abundancia relativa de esos taxones) de una muestra promedio dentro de un tipo de ambiente (sin rarefacción).
 
-Indeces Chao1, Shannon y Simpson 
+Indice de Chao1
 ```
-
 qiime diversity alpha \
 --i-table table.qza \
 --p-metric chao1 \
@@ -307,7 +306,9 @@ qiime diversity alpha \
 qiime metadata tabulate \
 --m-input-file chao1.qza \
 --o-visualization chao1.qzv
-
+```
+Indice de Shannon 
+```
 qiime diversity alpha \
 --i-table table.qza \
 --p-metric shannon \
@@ -316,7 +317,9 @@ qiime diversity alpha \
 qiime metadata tabulate \
 --m-input-file shannon.qza \
 --o-visualization shannon.qzv
-
+```
+Indice de Simpson 
+```
 qiime diversity alpha \
 --i-table table.qza \
 --p-metric simpson \
